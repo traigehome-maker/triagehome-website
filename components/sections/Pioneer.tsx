@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 import Container from "../ui/Container";

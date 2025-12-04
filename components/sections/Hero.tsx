@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 import { Button } from "@/components/ui/Button";
-import Container from "@/components/ui/Container";
+
 import Image from "next/image";
 
 export default function Hero() {
