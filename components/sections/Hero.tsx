@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className=" text-white relative md:pt-9 md:pb-10 overflow-hidden ">
+    <section className=" text-white bg-[#F5F9FC] relative md:pt-9 md:pb-10 overflow-hidden ">
       <Image
         src="/mirageRight.png"
         alt="Triage star"

@@ -16,7 +16,7 @@ const Pioneer = () => {
           healthcare. Limited spots available
         </p>
         <div className="relative bg-[url('/pioneerImg.png')] bg-no-repeat bg-cover rounded-[50px] py-10 px-9 overflow-hidden">
-          <div className="absolute z-20 top-0 left-0  inset-0 bg-linear-to-r from-[#02385a]/50 from-53% via-[#02385a]/40 to-[#aa7130]/50 to-10%  " />
+          <div className="absolute z-20 top-0 left-0  inset-0 bg-linear-to-r from-[#02385a]/70 from-53% via-[#02385a]/40 to-[#aa7130]/60 to-10%  " />
           {/* <Image
             src="/triagelogowhite.png"
             alt="Triage Logo"
@@ -38,7 +38,7 @@ const Pioneer = () => {
 
             <p className=" text-2xl leading-10">Limited Spots available</p>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-6">
               <Button>Join the Waitlist</Button>
               <Button variant="outline">Learn More</Button>
             </div>

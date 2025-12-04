@@ -12,7 +12,7 @@ export default function About() {
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
-          className="text-center font-bold text-[48px] mb-12 bg-linear-to-r from-[#02385A] from-0% via-[#02385A] via-50% to-[#AA7130] to-100% bg-clip-text text-transparent"
+          className="text-center font-bold text-[48px] mb-5 md:mb-12 bg-linear-to-r from-[#02385A] from-0% via-[#02385A] via-50% to-[#AA7130] to-100% bg-clip-text text-transparent"
         >
           About Us
         </motion.h2>
@@ -23,7 +23,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             src="/aboutImg1.png"
-            className="rounded-xl max-md:order-2 w-full"
+            className="rounded-xl max-md:order-2 w-full md:w-fit"
           />
           <div className="text-center flex flex-col justify-center">
             <motion.p
@@ -38,9 +38,11 @@ export default function About() {
               home.
             </motion.p>
 
-            <Button className=" hidden md:block drop-shadow-2xl w-fit mx-auto mt-5 md:mt-14">
-              Join the Waitlist
-            </Button>
+            <div className="hidden md:block">
+              <Button className=" drop-shadow-2xl w-fit mx-auto mt-5 md:mt-14">
+                Join the Waitlist
+              </Button>
+            </div>
           </div>
 
           <motion.img
@@ -48,7 +50,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             src="/aboutImg3.png"
-            className="rounded-xl w-full"
+            className="rounded-xl w-full md:w-fit"
           />
         </div>
         <motion.img
