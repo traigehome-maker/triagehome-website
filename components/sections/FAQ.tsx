@@ -3,6 +3,7 @@ import { useState } from "react";
 import Container from "@/components/ui/Container";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { fadeUp } from "@/lib/animations";
 
 const faqs = [
   {
@@ -30,7 +31,14 @@ export default function FAQ() {
   return (
     <section className="py-24 bg-zinc-50">
       <Container>
-        <h2 className="text-center text-3xl font-bold mb-10">FAQs</h2>
+        <motion.h3
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className=" font-bold text-center text-[48px] mb-5 md:mb-12 bg-linear-to-r from-[#02385A] from-0% via-[#02385A] via-20% to-[#AA7130]  bg-clip-text text-transparent"
+        >
+          Frequently Asked Questions
+        </motion.h3>
 
         {faqs.map((faq, i) => {
           const isOpen = open === i;

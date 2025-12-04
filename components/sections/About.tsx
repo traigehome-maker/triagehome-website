@@ -12,7 +12,7 @@ export default function About() {
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
-          className="text-center font-bold text-[48px] mb-5 md:mb-12 bg-linear-to-r from-[#02385A] from-0% via-[#02385A] via-50% to-[#AA7130] to-100% bg-clip-text text-transparent"
+          className="text-center font-bold text-[48px] mb-5 md:mb-12 bg-linear-to-r from-[#02385A] from-0% via-[#02385A] via-20% to-[#AA7130]  bg-clip-text text-transparent"
         >
           About Us
         </motion.h2>

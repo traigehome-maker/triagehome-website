@@ -31,6 +31,14 @@ export default function HowItWorks() {
   return (
     <section className="bg-[#F5F9FC] text-white py-10 md:py-24">
       <Container>
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          className="text-center font-bold text-[48px] mb-5 md:mb-12 bg-linear-to-r from-[#02385A] from-0% via-[#02385A] via-20% to-[#AA7130]  bg-clip-text text-transparent"
+        >
+          How It Works
+        </motion.h2>
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -41,9 +49,9 @@ export default function HowItWorks() {
             <motion.div
               key={i}
               variants={fadeUp}
-              className={`p-8 rounded-2xl  ${
+              className={`p-5 rounded-2xl  ${
                 i && "hover:bg-white hover:shadow-lg shadow-blue-500/20"
-              }`}
+              } space-y-3`}
             >
               <div className="w-[100px] h-[100px] bg-[#AA7130]/11 rounded-full flex items-center justify-center">
                 <Image
@@ -54,11 +62,11 @@ export default function HowItWorks() {
                   className="w-10 h-10"
                 />
               </div>
-              <h3 className="font-bold text-xl mb-2">
+              <h3 className="font-medium text-[#062126] text-2xl ">
                 {step.step} : {step.title}
               </h3>
-              <p className="text-gray-400">{step.title}</p>
-              <p className="text-gray-400">{step.description}</p>
+              {/* <p className="text-gray-400">{step.title}</p> */}
+              <p className="text-[#062126]/70 text-base">{step.description}</p>
             </motion.div>
           ))}
         </motion.div>
