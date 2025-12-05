@@ -26,17 +26,17 @@ export default function Navbar() {
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`w-full border-b sticky top-0 z-50 transition-all duration-300
+      className={`w-full border-b border-[#02385A]/10 sticky top-0 z-50 transition-all duration-300
       ${
         scrolled
-          ? "py-3 shadow-lg backdrop-blur-md bg-white/80"
-          : "py-4 bg-white"
+          ? "py-3 shadow-lg backdrop-blur-md bg-primaryblue/80"
+          : "py-4 bg-primaryblue"
       }`}
     >
       <div className="flex items-center max-w-7xl mx-auto justify-between px-4 lg:px-0">
         {/* Logo */}
         <Image
-          src="/triagelogo.png"
+          src="/triagelogowhite.png"
           alt="Triage Logo"
           width={151}
           height={32}
@@ -44,7 +44,7 @@ export default function Navbar() {
         />
 
         {/* Desktop Links */}
-        <div className="hidden text-[#1F1F1F] font-medium text-base md:flex gap-12">
+        <div className="hidden text-white font-semibold text-base md:flex gap-12">
           <Link href="#footer">Home</Link>
           <Link href="/">About Us</Link>
           <Link href="/">How it Works</Link>

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className=" text-white bg-[#F5F9FC] relative md:pt-9 md:pb-10 overflow-hidden ">
+    <section className=" text-white bg-[#F5F9FC] relative overflow-hidden ">
       <Image
         src="/mirageRight.png"
         alt="Triage star"
@@ -23,9 +23,9 @@ export default function Hero() {
         className="max-md:hidden w-auto absolute z-10 -bottom-20 -left-20"
       />
 
-      <div className="md:max-w-7xl mx-auto  md:px-8">
+      <div className="  ">
         {/* <div className="relative bg-[url('/Herobg.png')]  bg-no-repeat bg-cover rounded-[50px] pt-48 pb-24 overflow-hidden"> */}
-        <div className="relative   md:rounded-[50px] pt-20 pb-16 md:pt-48 md:pb-24 overflow-hidden">
+        <div className="relative   pt-20 pb-16 md:pt-48 md:pb-24 overflow-hidden">
           <Image
             src="/Herobg.png"
             alt="Hero background"
