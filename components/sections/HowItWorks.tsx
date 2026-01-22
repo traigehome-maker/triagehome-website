@@ -6,22 +6,23 @@ import Image from "next/image";
 
 const HowItWorksData = [
   {
-    step: "Step 1",
-    img: "/step1.png",
+    step: "Step",
+    img: "/describeIcon.png",
     title: "Describe Your Needs",
     description:
       "Book an appointment for a specific service or a General Check-Up.",
   },
   {
     step: "Step 2",
-    img: "/step2.png",
+
+    img: "/professionalIcon.png",
     title: "Match with a Pro",
     description:
       "Our algorithm instantly matches you with verified healthcare provider.",
   },
   {
-    step: "Step 3",
-    img: "/step3.png",
+    step: "Step",
+    img: "/doorstepIcon.png",
     title: "Care at Your Doorstep",
     description: "Receive quality care in the comfort of your home",
   },
@@ -29,44 +30,49 @@ const HowItWorksData = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-[#F5F9FC] text-white py-10 md:py-24">
+    <section className=" relative bg-white text-white py-10 md:py-24 overflow-x-hidden">
+      <div className="absolute rounded-full top-6 -right-32 h-[287px] w-[287px] bg-[#A6D20180]/50"></div>
+      <div className="absolute rounded-full bottom-6 -left-32 h-[287px] w-[287px] bg-[#A6D20180]/50"></div>
       <Container>
         <motion.h2
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
-          className="text-center font-bold text-[48px] mb-5 md:mb-12 bg-linear-to-r from-[#02385A] from-0% via-[#02385A] via-20% to-[#AA7130]  bg-clip-text text-transparent"
+          className="header3  text-center"
         >
           How It Works
         </motion.h2>
+        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal w-2xl mx-auto text-center">Quality Care in Three Simple Steps</p>
+
+
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
-          className="grid md:grid-cols-3 gap-10"
+          className="grid md:grid-cols-3 -hidden relative z-10 gap-10"
         >
           {HowItWorksData.map((step, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
-              className={`p-5 rounded-2xl  ${
-                i && "hover:bg-white hover:shadow-lg shadow-blue-500/20"
-              } space-y-3`}
+              className={`p-5 rounded-2xl text-white  ${
+                step.step === "Step" ? "bg-[#01B89A]" : "bg-[#B846D9]"
+              } space-y-4`}
             >
-              <div className="w-[100px] h-[100px] bg-[#AA7130]/11 rounded-full flex items-center justify-center">
+              <div className=" ">
                 <Image
                   src={step.img}
                   alt="Triage Home care"
-                  height={46}
-                  width={46}
-                  className="w-10 h-10"
+                  height={52}
+                  width={52}
+                  className=""
                 />
               </div>
-              <h3 className="font-medium text-[#062126] text-2xl ">
+              <h3 className="font-semibold  text-xl ">
                 {step.step} : {step.title}
               </h3>
               {/* <p className="text-gray-400">{step.title}</p> */}
-              <p className="text-[#062126]/70 text-base">{step.description}</p>
+              <p className="text-sm text-base ">{step.description}</p>
             </motion.div>
           ))}
         </motion.div>

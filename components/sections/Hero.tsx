@@ -1,86 +1,43 @@
 "use client";
-import { motion } from "framer-motion";
-import { fadeUp } from "@/lib/animations";
+
 import { Button } from "@/components/ui/Button";
 
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className=" text-white bg-[#F5F9FC] relative overflow-hidden ">
-      <Image
-        src="/mirageRight.png"
-        alt="Triage star"
-        height={250}
-        width={250}
-        className="max-md:hidden w-auto absolute z-10 top-0 -right-10"
-      />
-      <Image
-        src="/mirageLeft.png"
-        alt="Triage star"
-        height={350}
-        width={350}
-        className="max-md:hidden w-auto absolute z-10 -bottom-20 -left-20"
-      />
+    <section className=" text-white w-full max-w-7xl mx-auto text-center pt-10 md:pt-24 px-4 sm:px-6 lg:px-8">
+      <div className="absolute w-full h-[40vh] blur-2xl top-0 left-0 right-0   bg-[#F7F1EA]"></div>
+      <div className="relative max-w-4xl mx-auto">
+        <h2 className="font-bold text-primaryblue leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-[56px] lg:leading-[1.1]">
+          Expert Healthcare, Right Where You Are
+        </h2>
+        <p className="text-[#242424] text-sm sm:text-base leading-7 font-normal mt-4 mb-8 max-w-2xl mx-auto">
+          Professional, compassionate healthcare delivered to your home; powered
+          by technology, guided by people who truly care.
+        </p>
 
-      <div className="  ">
-        {/* <div className="relative bg-[url('/Herobg.png')]  bg-no-repeat bg-cover rounded-[50px] pt-48 pb-24 overflow-hidden"> */}
-        <div className="relative   pt-20 pb-16 md:pt-48 md:pb-24 overflow-hidden">
-          <Image
-            src="/Herobg.png"
-            alt="Hero background"
-            fill
-            // className="object-cover"
-            priority
-          />
-          <div className="absolute z-20 top-0 left-0  inset-0 bg-linear-to-t from-[#aa7130]/70 from-10% to-[#02385a]/70 to-55% " />
-          <Image
-            src="/star.png"
-            alt="Triage star"
-            height={50}
-            width={50}
-            className="absolute z-20 animate-pulse top-5 md:top-10 left-5 md:left-10"
-          />
-          <Image
-            src="/star.png"
-            alt="Triage star"
-            height={50}
-            width={50}
-            className="absolute z-20 animate-bounce bottom-5 md:bottom-10 right-5 md:right-10"
-          />
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            transition={{ duration: 0.8 }}
-            className=" text-center z-30 md:w-[65%] mx-auto relative space-y-7"
-          >
-            <p className="flex items-center gap-4 bg-white/10 backdrop-blur-3xl w-fit mx-auto border border-[#aa7130] rounded-full py-3 px-4 text-white text-xs">
-              <Image
-                src="/gradientStar.png"
-                alt="Triage star"
-                height={17}
-                width={17}
-                className=""
-              />
-              HomeHealth, Powered by People
-            </p>
-            <h1 className="text-3xl text-white md:text-6xl font-bold leading-tight">
-              Quality Healthcare <br /> Available at Your Fingertips
-            </h1>
-
-            <p className="text-base md:text-2xl md:leading-10">
-              Skip the wait. Experienced clinical providers including nurses,
-              health assistants, and community health workers are just a tap
-              away.
-            </p>
-
-            <div className="">
-              <Button>Join the Waitlist</Button>
-            </div>
-          </motion.div>
+        <div className="mb-12 flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-fit mx-auto">
+          <Button type="button" className="drop-shadow-3xl w-full sm:w-auto justify-center">
+            Join the waitlist
+          </Button>
+          <Button type="button" variant="outline" className="w-full sm:w-auto justify-center">
+            Learn more
+          </Button>
         </div>
       </div>
+
+      <div className="w-full relative mt-8">
+         <Image 
+           src="/heroimg.png" 
+           alt="Triage Home Care Hero Image" 
+           width={1000} 
+           height={1000} 
+           className="w-full h-auto object-contain"
+           priority
+         /> 
+      </div>
+      
     </section>
   );
 }
