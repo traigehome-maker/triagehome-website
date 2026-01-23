@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 import Image from "next/image";
@@ -18,9 +19,11 @@ export default function Hero() {
         </p>
 
         <div className="mb-12 flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-fit mx-auto">
-          <Button type="button" className="drop-shadow-3xl w-full sm:w-auto justify-center">
-            Join the waitlist
-          </Button>
+          <Link href="/#waitlist">
+            <Button type="button" className="drop-shadow-3xl w-full sm:w-auto justify-center">
+              Join the Waitlist
+            </Button>
+          </Link>
           <Button type="button" variant="outline" className="w-full sm:w-auto justify-center">
             Learn more
           </Button>

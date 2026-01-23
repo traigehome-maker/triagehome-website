@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 import Container from "../ui/Container";
 import { Button } from "../ui/Button";
@@ -18,7 +19,7 @@ const JoinTriageHome = () => {
           Be a Healthcare Pioneer
         </motion.h3> */}
 
-        <div className="relative bg-white/60 border-2 grid grid-cols-2 items-center justify-center gap-20 border-white p-10 rounded-2xl">
+        <div className="relative bg-white/60 border-2 grid md:grid-cols-2 items-center justify-center gap-5 md:gap-10 lg:gap-20 border-white p-10 rounded-2xl">
         <Image
           src="/heroImg.png"
           alt="Triage Home care"
@@ -30,7 +31,9 @@ const JoinTriageHome = () => {
         <div className="">
           <h4 className="font-semibold text-2xl md:text-3xl leading-10 text-primaryblue">Join TriageHome</h4>
           <p className="w-[90%] text-sm md:text-base text-[#505050] mt-4 mb-6">Join the future of homecare with TriageHome: Coming Soon on Android and IOS</p>
-          <Button>Join the waitlist</Button>
+          <Link href="/#waitlist">
+            <Button>Join the waitlist</Button>
+          </Link>
         </div>
 
         </div>

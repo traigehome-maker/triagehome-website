@@ -56,20 +56,21 @@ export default function MeetTheTeam() {
               className="group relative"
             >
               {/* Card Container */}
-              <div className="relative rounded-[32px] md:rounded-[40px] overflow-hidden  shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-[#AA7130]/50 border border-[#AA7130]">
-                {/* Image */}
-                <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative rounded-[32px] md:rounded-[40px]   shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-[#AA7130]/50 border border-[#AA7130]">
+               <div className="abosolute right-5 top-5">
+                 {/* Image */}
+                <div className="relative  ">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    width={400}
-                    height={533}
-                    className="w-full h-full object-cover"
+                    width={381}
+                    height={442}
+                    className=""
                   />
-                </div>
 
-                {/* Info Card Overlay */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white rounded-2xl p-4 shadow-lg flex items-center justify-between">
+
+                  {/* Info Card Overlay */}
+                <div className="absolute bottom-5 left-5 w-[90%] mx-auto bg-white rounded-2xl p-4 shadow-lg flex items-center justify-between">
                   <div className="pr-2">
                     <h3 className="text-lg md:text-xl font-semibold text-[#0A4A5C]">
                       {member.name}
@@ -88,6 +89,10 @@ export default function MeetTheTeam() {
                     <FaLinkedin className="text-white text-2xl" />
                   </a>
                 </div>
+                </div>
+               </div>
+
+                
               </div>
             </motion.div>
           ))}

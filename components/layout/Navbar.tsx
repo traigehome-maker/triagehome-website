@@ -44,20 +44,22 @@ export default function Navbar() {
         />
 
         {/* Desktop Links */}
-        <div className="hidden text-white font-normal text-base md:flex gap-12">
+        <div className="hidden text-white font-normal text-base lg:flex gap-12">
           <Link href="/">Home</Link>
           <Link href="/about">About Us</Link>
-          <Link href="#how-it-works">How it Works</Link>
+          <Link href="/#how-it-works">How it Works</Link>
           <Link href="/contact">Contact Us</Link>
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden md:block">
-          <Button className="drop-shadow-2xl">Join the Waitlist</Button>
+        <div className="hidden lg:block">
+          <Link href="/#waitlist">
+            <Button className="drop-shadow-2xl">Join the Waitlist</Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Icon */}
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden" onClick={() => setOpen(!open)}>
           {open ? (
             <X size={32} />
           ) : (
@@ -68,7 +70,7 @@ export default function Navbar() {
 
       {/* ✅ Mobile Dropdown */}
       <div
-        className={`md:hidden absolute left-0 w-full bg-white shadow-xl transition-all duration-300 overflow-hidden
+        className={`lg:hidden absolute left-0 w-full backdrop-white bg-white shadow-xl transition-all duration-300 overflow-hidden
         ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
       >
         <div className="flex flex-col gap-6 p-6 border-t">
@@ -80,7 +82,7 @@ export default function Navbar() {
             About Us
           </Link>
 
-          <Link onClick={() => setOpen(false)} href="#how-it-works">
+          <Link onClick={() => setOpen(false)} href="/#how-it-works">
             How it Works
           </Link>
 
@@ -88,7 +90,7 @@ export default function Navbar() {
             Contact Us
           </Link>
 
-          <Link href="#waitlist"><Button className="w-full mt-2">Join the Waitlist</Button></Link>
+          <Link href="/#waitlist"><Button className="w-full mt-2">Join the Waitlist</Button></Link>
         </div>
       </div>
     </motion.nav>

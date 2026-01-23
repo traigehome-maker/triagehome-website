@@ -16,7 +16,7 @@ const HowItWorksData = [
     step: "Step 2",
 
     img: "/professionalIcon.png",
-    title: "Match with a Pro",
+    title: "Match with Clinical Provider",
     description:
       "Our algorithm instantly matches you with verified healthcare provider.",
   },
@@ -24,13 +24,13 @@ const HowItWorksData = [
     step: "Step",
     img: "/doorstepIcon.png",
     title: "Care at Your Doorstep",
-    description: "Receive quality care in the comfort of your home",
+    description: "Receive quality care in the comfort of your home.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className=" relative bg-white text-white py-10 md:py-24 overflow-x-hidden">
+    <section id="how-it-works" className=" relative bg-white text-white py-10 lg:py-24 overflow-x-hidden">
       <div className="absolute rounded-full top-6 -right-32 h-[287px] w-[287px] bg-[#A6D20180]/50"></div>
       <div className="absolute rounded-full bottom-6 -left-32 h-[287px] w-[287px] bg-[#A6D20180]/50"></div>
       <Container>
@@ -42,14 +42,14 @@ export default function HowItWorks() {
         >
           How It Works
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal w-2xl mx-auto text-center">Quality Care in Three Simple Steps</p>
+        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal md:w-2xl mx-auto text-center">Quality Care in Three Simple Steps.</p>
 
 
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
-          className="grid md:grid-cols-3 -hidden relative z-10 gap-10"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 -hidden relative z-10 gap-10"
         >
           {HowItWorksData.map((step, i) => (
             <motion.div

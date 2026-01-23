@@ -7,21 +7,37 @@ import { fadeUp } from "@/lib/animations";
 
 const faqs = [
   {
-    q: "What is TriageHome and how does it work?",
-    a: "TriageHome is a platform that connects patients ",
+    q: "How quickly can I get a clinical provider to my home?",
+    a: "Our response depends on your service level. For Standard Care booked through our app, aqualified provider can typically be at your door within a few hours, depending on availability in your area. For our Triage Concierge members, we guarantee a rapid, priority response, often within the hour.",
   },
-  { q: "How are nurses verified on TriageHome?", a: "Yes, strict process..." },
+  { q: "Are all your nurses qualified and vetted?", 
+    a: "Absolutely. Every clinical provider in our network is a licensed professional. They undergo a rigorous verification process that includes credential checks, background screening, and interviews. Your safety and trust are our top priorities." },
   {
-    q: "Can I book a nurse for same-day homecare?",
-    a: "Yes, strict process...",
-  },
-  {
-    q: "How does TriageHome ensure patient safety during home visits?",
-    a: "Yes, strict process...",
+    q: "What happens if I need help outside of business hours?",
+    a: "We are here when you need us. While our Standard Care service operates on extended hours for booking from 6am – 9pm, 7 days a week. Our TriageConcierge service offers 24/7 access to a dedicated health coordinator for immediate assistance, any time of day or night.",
   },
   {
-    q: "What payment methods are accepted on TriageHome?",
-    a: "Yes, strict process...",
+    q: "How does payment work?",
+    a: "For Standard Care, you can view transparent, upfront pricing for each service in the app and pay securely via a payment gateway, card or bank transfer. For Triage Concierge and corporate partners, we offer structured billing cycles and detailed invoices. As we scale, we also plan to partner with select insurance providers and HMOs.",
+  },
+  {
+    q: "Can you help with long-term care for an elderly family member?",
+    a: "Yes, this is one of our core services. Our Elderly Care program provides compassionate, long-term support at home, including regular wellness checks, medication management, and companionship. We work with you to create a sustainable, personalized care plan.",
+  },
+  {
+    q: "How does TriageHome ensure patient and clinical providers safety?",
+    a: "We make safety our top priority for everyone. All our clinical providers are fully licensed an undergo thorough background checks. For your security, we use a verified platform for all bookings and communication. Providers also have access to safety features and support during visits. Our system allows for clear identification and two-way feedback after every appointment to maintain our high standards of care and trust.",
+  },
+  {
+    q: "What partnerships are available for hospitals and corporate wellness?",
+    a: `We offer structured partnerships designed to solve specific challenges:- For Hospitals (Staffing Retainer Model) : We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs.       
+        For Corporate Wellness:
+        We become an extension of your employee benefits. We provide on-demand, in-home
+        healthcare services for your staff from post-surgery care to wellness checks helping to
+        reduce absenteeism, boost productivity, and demonstrate care for your teams well-being. We
+        offer both standard service packages and premium concierge plans for executives.
+        Interested in a tailored proposal? Please contact our partnerships team at
+        triage_home@gmail.com.`,
   },
 ];
 
@@ -29,7 +45,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-12 md:py-24 bg-zinc-50">
+    <section id="faq" className="py-12 md:py-24 bg-zinc-50">
       <Container>
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start">
           <div className="w-full lg:w-1/3">

@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import Container from "@/components/ui/Container";
 import { Check, ChevronDown } from "lucide-react";
 
 const WaitList = () => {
@@ -61,9 +60,9 @@ const WaitList = () => {
   const servicesOptions = ["Home Care", "Consultation", "Emergency"];
 
   return (
-    <section className="">
-      <Container>
-        <div className="bg-[#B67A26] rounded-4xl py-16 md:py-20 ">
+    <section id="waitlist" className="md:max-w-7xl mx-auto  md:px-8 mb-10 md:mb-20">
+      
+        <div className="bg-[#B67A26] rounded-4xl px-4 py-16 md:py-20 ">
           <div className=" flex flex-col items-center text-center max-w-2xl mx-auto">
           {/* Logo Pill */}
           <div className="bg-primaryblue px-8 py-2 rounded-2xl shadow-lg">
@@ -169,7 +168,7 @@ const WaitList = () => {
           </form>
         </div>
         </div>
-      </Container>
+      
     </section>
   );
 };

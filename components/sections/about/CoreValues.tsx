@@ -14,14 +14,14 @@ const coreValuesData = [
   {
     title: "We Are Ready for You (Be Prepared)",
     description:
-      "Your well-being isn't a 9-to-5 job and requires discipline. We're always prepared—with the right technology, the right professionals, and the right plan—so you never feel alone or unsupported, no matter when you need us. Your peace of mind is our highest standard.",
+      "Your well-being isn't a 9-to-5 job and requires discipline. We're always prepared with the right technology, the right professionals, and the right plan so you never feel alone or unsupported, no matter when you need us. Your peace of mind is our highest standard.",
     iconColor: "bg-[#B87333]",
     titleColor: "text-[#B87333]",
   },
   {
     title: "We Listen First (Empathy)",
     description:
-      "Your well-being isn't a 9-to-5 job and requires discipline. We're always prepared—with the right technology, the right professionals, and the right plan—so you never feel alone or unsupported, no matter when you need us. Your peace of mind is our highest standard.",
+      "True care begins with listening. We take the time to understand notjust your medical needs but your personal story. We treat the person, not just the patient.",
     iconColor: "bg-[#00B89D]",
     titleColor: "text-[#00B89D]",
   },
@@ -75,24 +75,22 @@ export default function CoreValues() {
             <motion.div
               key={index}
               variants={fadeUp}
-              className="bg-white rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              className="bg-white relative overflow-hidden h-[390px] pt-24 rounded-3xl px-4 pb-6 md:px-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
               {/* Icon */}
-              <div className="mb-6">
-                <div
-                  className={`${value.iconColor} w-16 h-16 md:w-20 md:h-20 rounded-2xl transform rotate-12`}
+              <div
+                  className={`${value.iconColor} absolute top-1 -right-5  w-[77px] h-[74px]  rounded-[10px] transform rotate-[23deg]`}
                 ></div>
-              </div>
 
               {/* Title */}
               <h3
-                className={`${value.titleColor} text-lg md:text-xl font-semibold mb-3 md:mb-4 leading-tight`}
+                className={`${value.titleColor} text-lg md:text-xl font-bold mb-3 md:mb-4 leading-tight`}
               >
                 {value.title}
               </h3>
 
               {/* Description */}
-              <p className="text-[#505050] text-sm md:text-base leading-relaxed">
+              <p className="text-[#505050] font-semibold text-sm md:text-base leading-relaxed">
                 {value.description}
               </p>
             </motion.div>

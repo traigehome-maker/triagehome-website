@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import { fadeUp } from "@/lib/animations";
 
-export default function About() {
+export default function AboutHero() {
   return (
-    <section className="relative h-screen min-h-[600px] w-full bg-[url('/images/about/aboutHeroImg.png')] bg-cover bg-center bg-no-repeat flex items-center">
+    <section className="relative min-h-[400px] md:h-screen w-full bg-[url('/images/about/aboutHeroImg.png')] md:bg-cover bg-center bg-no-repeat flex items-center">
       <div className="absolute bg-primaryblue/70 inset-0"></div>
 
       <div className="relative w-full z-10">

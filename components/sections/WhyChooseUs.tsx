@@ -23,13 +23,13 @@ const WhyChooseUsData = [
     tag: "Assurance",
     img: "/trustedmedicals.png",
     title: "Trusted Medical Professionals",
-    description: "All our nurses and care providers are licensed, vetted, and trained to deliver safe, compassionate care you can rely on..",
+    description: "All our nurses and care providers are licensed, vetted, and trained to deliver safe, compassionate care you can rely on.",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className=" text-white py-10 md:py-24">
+    <section className=" text-white py-10 lg:py-24">
       <Container>
         <motion.h2
           variants={fadeUp}
@@ -37,14 +37,14 @@ export default function WhyChooseUs() {
           whileInView="show"
           className="header3 text-center"
         >
-          How It Works
+          Why Choose Us
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal w-2xl mx-auto text-center">TriageHome brings quality healthcare to the place you feel safest your home making care more personal, accessible, and stress-free</p>
+        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal md:w-2xl mx-auto text-center">TriageHome brings quality healthcare to your home making care more personal, accessible, and stress-free.</p>
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
-          className="grid md:grid-cols-3 gap-6 "
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 "
         >
           {WhyChooseUsData.map((step, i) => (
             <motion.div

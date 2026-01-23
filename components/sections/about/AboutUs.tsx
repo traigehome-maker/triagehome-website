@@ -40,7 +40,7 @@ export const AboutUs = () => {
               About Us
             </h2>
 
-            <div className="space-y-5 text-[#505050] text-base md:text-lg leading-relaxed text-center lg:text-left">
+            <div className="space-y-3 text-[#505050] text-base md:text-lg leading-relaxed text-justify lg:text-left">
               <p>
                 At TriageHome, we see a future where quality healthcare meets
                 you exactly where you are. We also believe the best place to
@@ -66,7 +66,7 @@ export const AboutUs = () => {
               <p>
                 We blend smart technology with genuine human connection to
                 create a healthcare experience that is proactive, accessible,
-                and deeply compassionate—because true care should adapt to your
+                and deeply compassionate because true care should adapt to your
                 life, not the other way around.
               </p>
             </div>

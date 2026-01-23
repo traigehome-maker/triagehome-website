@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { stagger, fadeUp } from "@/lib/animations";
 import Container from "@/components/ui/Container";
@@ -32,7 +33,7 @@ const WhatWeOfferData = [
 
 export default function WhatWeOffer() {
   return (
-    <section className=" text-white py-10 md:py-24">
+    <section id="services" className=" text-white py-10 lg:py-24">
       <Container>
         <motion.h2
           variants={fadeUp}
@@ -42,12 +43,12 @@ export default function WhatWeOffer() {
         >
           What We Offer
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal w-2xl mx-auto text-center">We offer three levels of services</p>
+        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal md:w-2xl mx-auto text-center">We offer three levels of services.</p>
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
-          className="grid md:grid-cols-3 gap-10"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           {WhatWeOfferData.map((step: {img: string, title: string, description: string}, i: number) => (
             <motion.div
@@ -61,14 +62,16 @@ export default function WhatWeOffer() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-primaryblue/50 opacity-90 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-primaryblue/60 opacity-90 transition-opacity duration-300" />
               
               <div className="relative z-10 space-y-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="font-medium text-white text-2xl mb-2 filter drop-shadow-md">
                     {step.title}
                 </h3>
-                <p className="text-gray-200 text-base font-light leading-relaxed opacity-90">{step.description}</p>
-                <Button className="w-full  text-white hover:bg-white hover:text-[#062126] transition-all duration-300 mt-2">Join the waitlist</Button>
+                <p className="text-white/90 text-base font-light leading-relaxed opacity-90">{step.description}</p>
+                <Link href="/#waitlist">
+                  <Button className="w-full  text-white hover:bg-white hover:text-[#062126] transition-all duration-300 mt-2">Join the waitlist</Button>
+                </Link>
               </div>
             </motion.div>
           ))}
