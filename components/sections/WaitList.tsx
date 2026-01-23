@@ -2,7 +2,8 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { Check, ChevronDown } from "lucide-react";
+import { Check, ChevronDown, CheckCircle2, AlertCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const WaitList = () => {
   const [formData, setFormData] = useState<{
@@ -17,6 +18,11 @@ const WaitList = () => {
 
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -54,36 +60,48 @@ const WaitList = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Waitlist submission:", formData);
-    // const email = formData.email;
-    // const userType = formData.userType;
-    // const services = formData.services; 
-    try{
-              if (!webappurl) {
-          throw new Error("Web app URL is missing");
-        }
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
 
-        fetch(webappurl, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(formData),
-});
+    try {
+      if (!webappurl) {
+        throw new Error("Web app URL is missing");
+      }
 
-      //       const res = await fetch(webappurl, {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({
-      //     email,
-      //     userType,
-      //     services,
-      //   }),
-      // });
-    }catch(error){
-      console.error(error)
+      const response = await fetch(webappurl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you for joining! We'll be in touch soon.",
+        });
+        setFormData({
+          email: "",
+          userType: "",
+          services: [],
+        });
+      } else {
+        const data = await response.json().catch(() => ({}));
+        setSubmitStatus({
+          type: "error",
+          message: data.message || "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmitStatus({
+        type: "error",
+        message: "Failed to join waitlist. Please check your connection.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
   };
 
   const servicesOptions = ["Home Care", "Consultation", "Emergency"];
@@ -110,6 +128,28 @@ const WaitList = () => {
           <p className="text-white/90 text-xs md:text-sm mb-10 font-light">
             Get exclusive access and be the first to know when we launch.
           </p>
+
+          <AnimatePresence mode="wait">
+            {submitStatus.type && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                className={`w-full max-w-md mb-6 p-4 rounded-2xl flex items-center gap-3 shadow-lg ${
+                  submitStatus.type === "success"
+                    ? "bg-green-500/10 border border-green-500/20 text-white"
+                    : "bg-red-500/10 border border-red-500/20 text-white"
+                } backdrop-blur-sm`}
+              >
+                {submitStatus.type === "success" ? (
+                  <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                ) : (
+                  <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
+                )}
+                <p className="text-sm font-medium">{submitStatus.message}</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           <form
             onSubmit={handleSubmit}
@@ -190,9 +230,17 @@ const WaitList = () => {
 
             <button
               type="submit"
-              className="w-full bg-[#023150] hover:bg-[#03446d] text-white font-medium text-lg px-6 py-3 rounded-full mt-4 transition-colors duration-300 shadow-md"
+              disabled={isSubmitting}
+              className="w-full bg-[#023150] hover:bg-[#03446d] disabled:bg-[#023150]/70 disabled:cursor-not-allowed text-white font-medium text-lg px-6 py-3 rounded-full mt-4 transition-colors duration-300 shadow-md flex items-center justify-center gap-2"
             >
-              Join now
+              {isSubmitting ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Joining...
+                </>
+              ) : (
+                "Join now"
+              )}
             </button>
           </form>
         </div>
