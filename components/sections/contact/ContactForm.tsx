@@ -73,6 +73,8 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
 
+    console.log(formData)
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -83,6 +85,7 @@ const ContactForm = () => {
       });
 
       const data = await response.json();
+      console.log(data)
 
       if (response.ok) {
         setSubmitStatus({

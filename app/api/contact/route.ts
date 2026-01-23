@@ -5,6 +5,15 @@ export async function POST(request: NextRequest) {
   try {
     const { name, email, phone, message } = await request.json();
 
+    // Check environment variables
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.error("Missing email configuration: EMAIL_USER or EMAIL_PASS");
+      return NextResponse.json(
+        { message: "Email service is not configured correctly on the server." },
+        { status: 500 }
+      );
+    }
+
     // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -25,18 +34,19 @@ export async function POST(request: NextRequest) {
     // Create transporter
     // NOTE: You'll need to configure these environment variables
     const transporter = nodemailer.createTransport({
-      service: "gmail", // or your email service
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASSWORD, // Your email password or app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     // Email to admin
     const adminMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.ADMIN_EMAIL || "triage_home@gmail.com",
-      subject: `New Contact Form Submission from ${name}`,
+      from: email,
+      to: process.env.EMAIL_USER,
+      replyTo: email,
+      subject: `New contact submitted`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
           <div style="background-color: #003D5B; color: white; padding: 20px; border-radius: 10px 10px 0 0; text-align: center;">
@@ -139,11 +149,18 @@ export async function POST(request: NextRequest) {
       { message: "Message sent successfully" },
       { status: 200 }
     );
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return NextResponse.json(
-      { message: "Failed to send message. Please try again later." },
-      { status: 500 }
-    );
+  }catch (error: unknown) {
+  console.error("Error sending email:", error);
+
+  let message = "Something went wrong";
+
+  if (error instanceof Error) {
+    message = error.message;
   }
+
+  return NextResponse.json(
+    { success: false, message },
+    { status: 500 }
+  );
+}
 }

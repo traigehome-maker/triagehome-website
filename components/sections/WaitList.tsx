@@ -50,11 +50,40 @@ const WaitList = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const webappurl = process.env.NEXT_PUBLIC_WEB_APP_URL;
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Waitlist submission:", formData);
-    // Add logic to submit to backend or API
-    // alert("Thank you for joining the waitlist!");
+    // const email = formData.email;
+    // const userType = formData.userType;
+    // const services = formData.services; 
+    try{
+              if (!webappurl) {
+          throw new Error("Web app URL is missing");
+        }
+
+        fetch(webappurl, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(formData),
+});
+
+      //       const res = await fetch(webappurl, {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     email,
+      //     userType,
+      //     services,
+      //   }),
+      // });
+    }catch(error){
+      console.error(error)
+    }
+
   };
 
   const servicesOptions = ["Home Care", "Consultation", "Emergency"];
