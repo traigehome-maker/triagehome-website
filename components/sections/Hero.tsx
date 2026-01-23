@@ -24,9 +24,9 @@ export default function Hero() {
               Join the Waitlist
             </Button>
           </Link>
-          <Button type="button" variant="outline" className="w-full sm:w-auto justify-center">
+          <Link href="/#how-it-works"><Button type="button" variant="outline" className="w-full sm:w-auto justify-center">
             Learn more
-          </Button>
+          </Button></Link>
         </div>
       </div>
 

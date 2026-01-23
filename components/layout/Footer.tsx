@@ -75,9 +75,12 @@ const Footer = () => {
             >
               Privacy policy
             </button>
-            <Link href="/terms" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit">
-              Terms & condition
-            </Link>
+            <button 
+              onClick={() => setIsDisclaimerOpen(true)}
+              className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit text-left"
+            >
+              Terms and Condition
+            </button>
           </div>
 
           {/* Column 4: Socials */}
@@ -85,7 +88,7 @@ const Footer = () => {
             <h4 className="font-bold text-xl text-white">Follow us</h4>
             <div className="flex items-center gap-6">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/triage.home"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-300 transition-colors"
@@ -94,11 +97,11 @@ const Footer = () => {
                 <FaInstagram size={24} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://wa.me/2348131837183"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-300 transition-colors"
-                aria-label="X (Twitter)"
+                aria-label="X (WhatsApp)"
               >
                 <FaWhatsapp size={24} />
               </a>

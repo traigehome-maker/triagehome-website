@@ -35,13 +35,13 @@ export default function Navbar() {
     >
       <div className="flex items-center max-w-7xl mx-auto justify-between px-4 lg:px-0">
         {/* Logo */}
-        <Image
+        <Link href="/"><Image
           src="/triagelogowhite.png"
           alt="Triage Logo"
           width={161}
           height={40}
           priority
-        />
+        /></Link>
 
         {/* Desktop Links */}
         <div className="hidden text-white font-normal text-base lg:flex gap-12">
