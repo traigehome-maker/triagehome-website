@@ -9,19 +9,19 @@ const teamMembers = [
   {
     name: "Dr Ifunaya",
     role: "Chief executive officer(CEO)",
-    image: "/images/about/ifunayaImg.png",
+    image: "/images/about/IfunayaImg.png",
     linkedin: "https://linkedin.com/in/ifunaya",
   },
   {
     name: "Dr Ifunaya",
     role: "Chief executive officer(CEO)",
-    image: "/images/about/ifunayaImg.png",
+    image: "/images/about/IfunayaImg.png",
     linkedin: "https://linkedin.com/in/ifunaya",
   },
   {
     name: "Dr Ifunaya",
     role: "Chief executive officer(CEO)",
-    image: "/images/about/ifunayaImg.png",
+    image: "/images/about/IfunayaImg.png",
     linkedin: "https://linkedin.com/in/ifunaya",
   },
 ];

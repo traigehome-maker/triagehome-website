@@ -32,7 +32,7 @@ export default function Hero() {
 
       <div className="w-full relative mt-8">
          <Image 
-           src="/heroimg.png" 
+           src="/heroImg.png" 
            alt="Triage Home Care Hero Image" 
            width={1000} 
            height={1000} 
