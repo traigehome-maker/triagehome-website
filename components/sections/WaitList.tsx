@@ -2,8 +2,9 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { Check, ChevronDown, CheckCircle2, AlertCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Check, ChevronDown } from "lucide-react";
+
+import { toast } from 'react-toastify';
 
 const WaitList = () => {
   const [formData, setFormData] = useState<{
@@ -19,10 +20,7 @@ const WaitList = () => {
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({ type: null, message: "" });
+
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -59,41 +57,42 @@ const WaitList = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: "" });
     console.log(formData)
 
     try {
-      const response = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+       const response = await fetch('/api/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json().catch(() => ({}));
+      const data = await response.json();
       console.log(data)
+      // const response = await fetch("/api/waitlist", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(formData),
+      // });
+
+      // const data = await response.json().catch(() => ({}));
+      // console.log(data)
 
       if (response.ok && data.success) {
-        setSubmitStatus({
-          type: "success",
-          message: "Thank you for joining! We'll be in touch soon.",
-        });
+        toast.success("Thank you for joining! We'll be in touch soon.");
         setFormData({
           email: "",
           userType: "",
           services: [],
         });
       } else {
-        setSubmitStatus({
-          type: "error",
-          message: data.message || "Something went wrong. Please try again.",
-        });
+        const errorMsg = data.error || data.message || "Something went wrong. Please try again.";
+        toast.error(errorMsg);
       }
     } catch (error) {
       console.error(error);
-      setSubmitStatus({
-        type: "error",
-        message: "Failed to join waitlist. Please check your connection.",
-      });
+      toast.error("Failed to join waitlist. Please check your connection.");
     } finally {
       setIsSubmitting(false);
     }
@@ -123,27 +122,7 @@ const WaitList = () => {
             Get exclusive access and be the first to know when we launch.
           </p>
 
-          <AnimatePresence mode="wait">
-            {submitStatus.type && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: -10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                className={`w-full max-w-md mb-6 p-4 rounded-2xl flex items-center gap-3 shadow-lg ${
-                  submitStatus.type === "success"
-                    ? "bg-green-500/10 border border-green-500/20 text-white"
-                    : "bg-red-500/10 border border-red-500/20 text-white"
-                } backdrop-blur-sm`}
-              >
-                {submitStatus.type === "success" ? (
-                  <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
-                ) : (
-                  <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />
-                )}
-                <p className="text-sm font-medium">{submitStatus.message}</p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+
 
           <form
             onSubmit={handleSubmit}

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Container from "@/components/ui/Container";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeUp } from "@/lib/animations";
+
 
 const faqs = [
   {
@@ -49,14 +49,19 @@ export default function FAQ() {
       <Container>
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start">
           <div className="w-full lg:w-1/3">
+          {/* Left Side - Heading */}
+          
             <motion.h3
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              className="font-semibold text-2xl md:text-3xl lg:text-4xl mb-5 text-primaryblue"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              
+              className="lg:sticky lg:top-24 font-semibold text-2xl md:text-3xl lg:text-4xl mb-5 text-primaryblue"
             >
               Frequently Asked Questions
             </motion.h3>
+            
 
             <p className="text-base md:text-lg text-gray-600">
               Confused about what Traige does or need clarification about something? Learn more

@@ -20,12 +20,12 @@ export default function Hero() {
 
         <div className="mb-12 flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-fit mx-auto">
           <Link href="/#waitlist" className="w-full sm:w-auto">
-            <Button type="button" className="drop-shadow-3xl w-full sm:w-48 justify-center">
+            <Button type="button" className="drop-shadow-3xl w-full sm:w-48 md:w-full justify-center">
               Join the Waitlist
             </Button>
           </Link>
           <Link href="/#how-it-works" className="w-full sm:w-auto">
-            <Button type="button" variant="outline" className="w-full sm:w-48 justify-center">
+            <Button type="button" variant="outline" className="w-full sm:w-48 md:w-full justify-center">
               Learn more
             </Button>
           </Link>

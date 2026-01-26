@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { toast } from 'react-toastify';
 
 interface FormData {
   name: string;
@@ -26,10 +27,7 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({ type: null, message: "" });
+
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -71,7 +69,6 @@ const ContactForm = () => {
     }
 
     setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: "" });
 
     console.log(formData)
 
@@ -88,22 +85,17 @@ const ContactForm = () => {
       console.log(data)
 
       if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message: "Thank you! Your message has been sent successfully.",
-        });
+        toast.success("Thank you! Your message has been sent successfully.");
+
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        setSubmitStatus({
-          type: "error",
-          message: data.message || "Something went wrong. Please try again.",
-        });
+        const errorMsg = data.message || "Something went wrong. Please try again.";
+        toast.error(errorMsg);
+
       }
     } catch (error) {
-      setSubmitStatus({
-        type: "error",
-        message: "Failed to send message. Please try again later.",
-      });
+      toast.error("Failed to send message. Please try again later.");
+
       console.log(error); 
     } finally {
       setIsSubmitting(false);
@@ -235,20 +227,7 @@ const ContactForm = () => {
                 {isSubmitting ? "Sending..." : "Leave us a message"}
               </motion.button>
 
-              {/* Status Message */}
-              {submitStatus.type && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={`p-4 rounded-xl ${
-                    submitStatus.type === "success"
-                      ? "bg-green-50 text-green-700 border border-green-200"
-                      : "bg-red-50 text-red-700 border border-red-200"
-                  }`}
-                >
-                  {submitStatus.message}
-                </motion.div>
-              )}
+
             </form>
           </motion.div>
         </div>

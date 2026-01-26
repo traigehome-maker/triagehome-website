@@ -19,12 +19,12 @@ const teamMembers = [
     image: "/images/about/lawyer.png",
     linkedin: "https://linkedin.com/in/ifunaya",
   },
-  {
-    name: "Dr Ifunaya",
-    role: "Chief executive officer(CEO)",
-    image: "/images/about/IfunayaImg.png",
-    linkedin: "https://linkedin.com/in/ifunaya",
-  },
+  // {
+  //   name: "Dr Ifunaya",
+  //   role: "Chief executive officer(CEO)",
+  //   image: "/images/about/IfunayaImg.png",
+  //   linkedin: "https://linkedin.com/in/ifunaya",
+  // },
 ];
 
 export default function MeetTheTeam() {
@@ -48,7 +48,7 @@ export default function MeetTheTeam() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 justify-center items-center  w-fit mx-auto"
         >
           {teamMembers.map((member, index) => (
             <motion.div

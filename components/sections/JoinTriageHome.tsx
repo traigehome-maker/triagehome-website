@@ -21,7 +21,7 @@ const JoinTriageHome = () => {
 
         <div className="relative bg-white/60 border-2 grid md:grid-cols-2 items-center justify-center gap-5 md:gap-10 lg:gap-20 border-white p-10 rounded-2xl">
         <Image
-          src="/heroImg.png"
+          src="/jointriage.png"
           alt="Triage Home care"
           height={440}
           width={591}
