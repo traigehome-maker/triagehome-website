@@ -62,21 +62,19 @@ const WaitList = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
+    console.log(formData)
 
     try {
-      if (!webappurl) {
-        throw new Error("Web app URL is missing");
-      }
-
-      const response = await fetch(webappurl, {
+      const response = await fetch("/api/waitlist", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      const data = await response.json().catch(() => ({}));
+      console.log(data)
+
+      if (response.ok && data.success) {
         setSubmitStatus({
           type: "success",
           message: "Thank you for joining! We'll be in touch soon.",
@@ -87,7 +85,6 @@ const WaitList = () => {
           services: [],
         });
       } else {
-        const data = await response.json().catch(() => ({}));
         setSubmitStatus({
           type: "error",
           message: data.message || "Something went wrong. Please try again.",
@@ -103,7 +100,6 @@ const WaitList = () => {
       setIsSubmitting(false);
     }
   };
-
   const servicesOptions = ["Home Care", "Consultation", "Emergency"];
 
   return (

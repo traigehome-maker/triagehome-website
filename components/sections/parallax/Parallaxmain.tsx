@@ -15,22 +15,24 @@ export default function Parallaxmain() {
   });
 
   return (
-    <main ref={container} className="relative pb-16 pt-16 mt-10 md:mt-[10vh] bg-[#F5F5F5]">
-      <ViewAnimation>
-          <motion.h2
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            className="text-3xl md:text-5xl font-bold text-center text-[#02385A] mb-4"
-          >
-            What We Do
-          </motion.h2>
-          <p className="mt-4  text-[#505050] text-base md:text-lg leading-relaxed font-normal max-w-2xl mx-auto text-center">
-            For everyday wellness to complex recovery, our clinical team provides professional support across every stage of care.
-          </p>
-        </ViewAnimation>
+    <main ref={container} className="relative bg-[#F5F5F5] py-20">
+      <div className="mb-10 md:mb-20">
+        <ViewAnimation>
+            <motion.h2
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              className="text-4xl md:text-6xl font-black text-center text-[#02385A] mb-6 tracking-tight"
+            >
+              What We Do
+            </motion.h2>
+            <p className="mt-4 text-[#505050] text-lg md:text-xl font-medium max-w-3xl mx-auto text-center px-4 leading-relaxed">
+              For everyday wellness to complex recovery, our clinical team provides professional support across every stage of care.
+            </p>
+          </ViewAnimation>
+      </div>
 
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         {projects.map((project, i) => {
           const targetScale = 1 - (projects.length - i) * 0.05;
           return (
@@ -46,6 +48,8 @@ export default function Parallaxmain() {
           );
         })}
       </div>
+      {/* Bottom spacer for extra scroll room */}
+      <div className="h-[20vh] md:h-[30vh]" />
     </main>
   );
 }

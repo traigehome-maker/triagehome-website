@@ -36,7 +36,7 @@ export default function MissionVision() {
             <motion.div
               key={index}
               variants={fadeUp}
-              className={`${item.bgColor} rounded-3xl md:rounded-[32px] p-6 md:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 text-white text-center sm:text-left`}
+              className={`${item.bgColor} rounded-3xl md:rounded-[32px] p-6 md:p-8 flex flex-col sm:flex-row sm:items-center md:items-start gap-4 md:gap-6 text-white md:text-center sm:text-left`}
             >
               {/* Image Container */}
               <div className="flex-shrink-0">

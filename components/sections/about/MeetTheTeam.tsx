@@ -4,6 +4,7 @@ import { fadeUp, stagger } from "@/lib/animations";
 import Container from "@/components/ui/Container";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
+import { MdRememberMe } from "react-icons/md";
 
 const teamMembers = [
   {
@@ -13,9 +14,10 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/ifunaya",
   },
   {
-    name: "Dr Ifunaya",
+    name: "Mr. Femi Akinpelu ",
+    qualification:'LLB,BL,LLM ',
     role: "Chief executive officer(CEO)",
-    image: "/images/about/IfunayaImg.png",
+    image: "/images/about/lawyer.png",
     linkedin: "https://linkedin.com/in/ifunaya",
   },
   {
@@ -56,8 +58,8 @@ export default function MeetTheTeam() {
               className="group relative"
             >
               {/* Card Container */}
-              <div className="relative rounded-[32px] md:rounded-[40px]   shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-[#AA7130]/50 border border-[#AA7130]">
-               <div className="abosolute right-5 top-5">
+              <div className="relative w-[340px] h-[400px] rounded-t-[20px] rounded-b-[32px] md:rounded-[40px]  pt-5 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-[#AA7130]/30 border border-[#AA7130]">
+               <div className="absolute w-[340px] h-[400px] -left-3 top-3 rounded-t-[20px] rounded-b-[32px] md:rounded-[40px]">
                  {/* Image */}
                 <div className="relative  ">
                   <Image
@@ -72,8 +74,8 @@ export default function MeetTheTeam() {
                   {/* Info Card Overlay */}
                 <div className="absolute bottom-5 left-5 w-[90%] mx-auto bg-white rounded-2xl p-4 shadow-lg flex items-center justify-between">
                   <div className="pr-2">
-                    <h3 className="text-lg md:text-xl font-semibold text-[#0A4A5C]">
-                      {member.name}
+                    <h3 className="text-lg md:text-lg font-semibold text-[#0A4A5C]">
+                      {member.name} <span className="text-sm text-[#505050]">{member.qualification}</span>
                     </h3>
                     <p className="text-sm text-[#505050]">{member.role}</p>
                   </div>

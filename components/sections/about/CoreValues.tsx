@@ -75,14 +75,15 @@ export default function CoreValues() {
             <motion.div
               key={index}
               variants={fadeUp}
-              className="bg-white relative overflow-hidden h-[390px] pt-24 rounded-3xl px-4 pb-6 md:px-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              className="bg-white relative grid place-content-center  overflow-hidden   md:h-[390px] pt-18 md:pt-24 rounded-3xl px-4 pb-6 md:px-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
               {/* Icon */}
               <div
                   className={`${value.iconColor} absolute top-1 -right-5  w-[77px] h-[74px]  rounded-[10px] transform rotate-[23deg]`}
                 ></div>
 
-              {/* Title */}
+              <div className="">
+                {/* Title */}
               <h3
                 className={`${value.titleColor} text-lg md:text-xl font-bold mb-3 md:mb-4 leading-tight`}
               >
@@ -93,6 +94,7 @@ export default function CoreValues() {
               <p className="text-[#505050] font-semibold text-sm md:text-base leading-relaxed">
                 {value.description}
               </p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

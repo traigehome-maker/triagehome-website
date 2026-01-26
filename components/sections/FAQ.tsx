@@ -8,7 +8,7 @@ import { fadeUp } from "@/lib/animations";
 const faqs = [
   {
     q: "How quickly can I get a clinical provider to my home?",
-    a: "Our response depends on your service level. For Standard Care booked through our app, aqualified provider can typically be at your door within a few hours, depending on availability in your area. For our Triage Concierge members, we guarantee a rapid, priority response, often within the hour.",
+    a: "Our response depends on your service level. For Standard Care booked through our app, aqualified provider can typically be at your door within a few hours, depending on availability in your area. For our Triage Concierge members, we guarantee a rapid, priority response.",
   },
   { q: "Are all your nurses qualified and vetted?", 
     a: "Absolutely. Every clinical provider in our network is a licensed professional. They undergo a rigorous verification process that includes credential checks, background screening, and interviews. Your safety and trust are our top priorities." },

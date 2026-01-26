@@ -1,150 +1,150 @@
-// export const projects = [
-//   {
-//     title: "Elderly Care",
-//     description:
-//       "Compassionate, dignified support for elderly and or physically challenged patients, focusing on companionship, daily activity assistance, medication management, and regular health monitoring to promote well-being and independence at home.",
-//     src: "/images/elderlycare.png",
-//     view: "",
-//     website: "",
-//     color: "#02385A",
-//     bgColor: "#02385A/90",
-//   },
-//   {
-//     title: "Post-Surgery Care",
-//     description:
-//       "Recovery support with vital signs monitoring, surgical site inspection, medication reminders, and screening for any complications.",
-//     src: "/images/postsurgery.png",
-//     view: "",
-//     website: "",
-//     color: "rgba(0, 184, 158, 1)",
-//     bgColor: "rgba(0, 184, 158, 0.1)",
-//   },
-
-//   {
-//     title: "Chronic Disease Management",
-//     description:
-//       "Ongoing support for conditions like diabetes and hypertension, including regular glucose and blood pressure checks, medication guidance, and empowering patient education.",
-//     src: "/images/chronicdisease.png",
-//     view: "",
-//     website: "",
-//     color: "rgba(184, 70, 217, 1)",
-//     bgColor: "rgba(184, 70, 217, 0.1)",
-//   },
-//   {
-//     title: "IV Therapy",
-//     description:
-//       "Administration of prescribed IV fluids, vitamins, or medications.",
-//     src: "/images/ivtherapy.png",
-//     view: "",
-//     website: "",
-//     color: "rgba(166, 211, 0, 1)",
-//     bgColor: "rgba(166, 211, 0, 0.1)",
-//   },
-//   {
-//     title: "Wellness Check",
-//     description:
-//       "A health review including basic vitals check, health risk assessment, and a supportive lifestyle consultation.",
-//     src: "/images/wellnesscheck.png",
-//     view: "",
-//     website: "",
-//     color: "rgba(177, 100, 83, 1)",
-//     bgColor: "rgba(177, 100, 83, 0.1)",
-//   },
-//   {
-//     title: "Selected Health Screening",
-//     description:
-//       "On-the-spot testing with our basic package, incuding rapid  tests for Malaria, Typhoid and HIV, alongside Blood Pressure, Blood Glucose, and BMI checks.",
-//     src: "/images/healthscreening.png",
-//     view: "",
-//     website: "",
-//     color: "rgba(0, 184, 158, 1)",
-//     bgColor: "rgba(0, 184, 158, 0.1)",
-//   },
-//   {
-//     title: "Wound Dressing & Care",
-//     description:
-//       "Assesment, gently cleaning, dressing changes and infection monitoring for safe, effective healing.",
-//     src: "/images/wounddressing.png",
-//     view: "",
-//     website: "",
-//     color: "rgba(173, 113, 50, 1)",
-//     bgColor: "rgba(173, 113, 50, 1)/20",
-//   },
-  
-// ];
-
-
 export const projects = [
   {
-    title: "z",
+    title: "Elderly Care",
     description:
-      "NutriFit is a web-based solution that aims to provide Nigerians seeking to imporove the general wellbeing with a one-stop lifestyle platform for their deitary and fitness needs.",
+      "Compassionate, dignified support for elderly and or physically challenged patients, focusing on companionship, daily activity assistance, medication management, and regular health monitoring to promote well-being and independence at home.",
     src: "/images/elderlycare.png",
     view: "",
     website: "",
-    color: "#722D65",
-    bgColor: "#FFEDFB",
+    color: "#02385A",
+    bgColor: "#DDE2E6",
   },
   {
-    title: "ClearAir",
+    title: "Post-Surgery Care",
     description:
-      "Clear Air aims to provide valuable information, resources, and educational content related to air pollution",
+      "Recovery support with vital signs monitoring, surgical site inspection, medication reminders, and screening for any complications.",
     src: "/images/postsurgery.png",
     view: "",
     website: "",
-    color: "#56692A",
-    bgColor: "#F5FDE4",
+    color: "#00B89E",
+    bgColor: "#DDEFEC",
   },
 
   {
-    title: "Aqua Solution",
+    title: "Chronic Disease Management",
     description:
-      "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+      "Ongoing support for conditions like diabetes and hypertension, including regular glucose and blood pressure checks, medication guidance, and empowering patient education.",
     src: "/images/chronicdisease.png",
     view: "",
     website: "",
-    color: "#722D65",
-    bgColor: "#FFEDFB",
+    color: "#B846D9",
+    bgColor: "#EFE3F2",
   },
   {
-    title: "Aqua Solution",
+    title: "IV Therapy",
     description:
-      "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+      "Administration of prescribed IV fluids, vitamins, or medications.",
     src: "/images/ivtherapy.png",
     view: "",
     website: "",
-    color: "#722D65",
-    bgColor: "#FFEDFB",
+    color: "#A6D300",
+    bgColor: "#EFE3F2",
   },
   {
-    title: "Aqua Solution",
+    title: "Wellness Check",
     description:
-      "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+      "A health review including basic vitals check, health risk assessment, and a supportive lifestyle consultation.",
     src: "/images/wellnesscheck.png",
     view: "",
     website: "",
-    color: "#722D65",
-    bgColor: "#FFEDFB",
+    color: "#B16453",
+    bgColor: "#EEE7E5",
   },
   {
-    title: "Aqua Solution",
+    title: "Selected Health Screening",
     description:
-      "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+      "On-the-spot testing with our basic package, incuding rapid  tests for Malaria, Typhoid and HIV, alongside Blood Pressure, Blood Glucose, and BMI checks.",
     src: "/images/healthscreening.png",
     view: "",
     website: "",
-    color: "#722D65",
-    bgColor: "#FFEDFB",
+    color: "#00B89E",
+    bgColor: "#DDEFEC",
   },
   {
-    title: "Aqua Solution",
+    title: "Wound Dressing & Care",
     description:
-      "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+      "Assesment, gently cleaning, dressing changes and infection monitoring for safe, effective healing.",
     src: "/images/wounddressing.png",
     view: "",
     website: "",
-    color: "#722D65",
-    bgColor: "#FFEDFB",
+    color: "#AD7132",
+    bgColor: "#EEE8E2",
   },
   
 ];
+
+
+// export const projects = [
+//   {
+//     title: "z",
+//     description:
+//       "NutriFit is a web-based solution that aims to provide Nigerians seeking to imporove the general wellbeing with a one-stop lifestyle platform for their deitary and fitness needs.",
+//     src: "/images/elderlycare.png",
+//     view: "",
+//     website: "",
+//     color: "#722D65",
+//     bgColor: "#FFEDFB",
+//   },
+//   {
+//     title: "ClearAir",
+//     description:
+//       "Clear Air aims to provide valuable information, resources, and educational content related to air pollution",
+//     src: "/images/postsurgery.png",
+//     view: "",
+//     website: "",
+//     color: "#56692A",
+//     bgColor: "#F5FDE4",
+//   },
+
+//   {
+//     title: "Aqua Solution",
+//     description:
+//       "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+//     src: "/images/chronicdisease.png",
+//     view: "",
+//     website: "",
+//     color: "#722D65",
+//     bgColor: "#FFEDFB",
+//   },
+//   {
+//     title: "Aqua Solution",
+//     description:
+//       "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+//     src: "/images/ivtherapy.png",
+//     view: "",
+//     website: "",
+//     color: "#722D65",
+//     bgColor: "#FFEDFB",
+//   },
+//   {
+//     title: "Aqua Solution",
+//     description:
+//       "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+//     src: "/images/wellnesscheck.png",
+//     view: "",
+//     website: "",
+//     color: "#722D65",
+//     bgColor: "#FFEDFB",
+//   },
+//   {
+//     title: "Aqua Solution",
+//     description:
+//       "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+//     src: "/images/healthscreening.png",
+//     view: "",
+//     website: "",
+//     color: "#722D65",
+//     bgColor: "#FFEDFB",
+//   },
+//   {
+//     title: "Aqua Solution",
+//     description:
+//       "Aqua Solution provides lasting solutions to water issues of every affected consumer, through the provision of organic water disinfection and purification products.",
+//     src: "/images/wounddressing.png",
+//     view: "",
+//     website: "",
+//     color: "#722D65",
+//     bgColor: "#FFEDFB",
+//   },
+  
+// ];

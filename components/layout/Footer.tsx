@@ -6,16 +6,22 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import {  FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
-import DisclaimerModal from "../modals/DisclaimerModal";
+import TermsAndConditionsModal from "../modals/TermsAndConditionsModal";
+import PrivacyPolicyModal from "../modals/PrivacyPolicyModal";
 
 const Footer = () => {
-  const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   return (
     <footer className="bg-[#023150] text-white pt-16 pb-8">
-      <DisclaimerModal 
-        isOpen={isDisclaimerOpen} 
-        onClose={() => setIsDisclaimerOpen(false)} 
+      <TermsAndConditionsModal 
+        isOpen={isTermsOpen} 
+        onClose={() => setIsTermsOpen(false)} 
+      />
+      <PrivacyPolicyModal 
+        isOpen={isPrivacyOpen} 
+        onClose={() => setIsPrivacyOpen(false)} 
       />
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-10 md:gap-8 mb-16">
@@ -38,8 +44,8 @@ const Footer = () => {
 
           <div className="flex flex-col gap-3 text-gray-300 text-sm md:text-base font-light">
             <h4 className="font-bold text-xl text-white">Reach out</h4>
-            <a href="mailto:triage@gmail.com" className="hover:text-white transition-colors w-fit">
-                triage@gmail.com
+            <a href="mailto:traigehome@gmail.com" className="hover:text-white transition-colors w-fit">
+                traigehome@gmail.com
               </a>
               <a href="tel:+234812345678" className="hover:text-white transition-colors w-fit">
                 +234812345678
@@ -70,13 +76,13 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-xl text-white">Terms</h4>
             <button 
-              onClick={() => setIsDisclaimerOpen(true)}
+              onClick={() => setIsPrivacyOpen(true)}
               className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit text-left"
             >
               Privacy policy
             </button>
             <button 
-              onClick={() => setIsDisclaimerOpen(true)}
+              onClick={() => setIsTermsOpen(true)}
               className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit text-left"
             >
               Terms and Condition
