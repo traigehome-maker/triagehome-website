@@ -48,10 +48,11 @@ export async function POST(req: Request) {
       throw new Error(`Apps Script returned an HTML error (check script deployment/syntax)`);
     }
 
-  } catch (err: any) {
-    console.error("Error in /api/waitlist:", err);
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err));
+    console.error("Error in /api/waitlist:", error);
     return NextResponse.json(
-      { success: false, message: err.message || "Failed to submit waitlist" },
+      { success: false, message: error.message || "Failed to submit waitlist" },
       { status: 500 }
     );
   }

@@ -56,8 +56,6 @@ const WaitList = () => {
     });
   };
 
-  const webappurl = process.env.NEXT_PUBLIC_WEB_APP_URL;
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);

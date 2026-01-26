@@ -4,7 +4,6 @@ import { fadeUp, stagger } from "@/lib/animations";
 import Container from "@/components/ui/Container";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
-import { MdRememberMe } from "react-icons/md";
 
 const teamMembers = [
   {
