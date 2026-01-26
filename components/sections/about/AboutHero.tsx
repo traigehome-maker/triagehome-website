@@ -11,14 +11,14 @@ export default function AboutHero() {
       <div className="relative w-full z-10">
         <Container>
           <div className="max-w-3xl">
-            <motion.h2
+            <motion.h1
               variants={fadeUp}
               initial="hidden"
               whileInView="show"
               className="text-left text-white font-bold text-[28px] md:text-[56px] leading-[40px] md:leading-[64px] mb-5 md:mb-8"
             >
               A New Kind of Healthcare Where You Are
-            </motion.h2>
+            </motion.h1>
 
             <motion.p
               variants={fadeUp}

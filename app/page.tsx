@@ -12,8 +12,30 @@ import OurSolutions from "@/components/sections/OurSolutions";
 import WhatWeOffer from "@/components/sections/WhatWeOffer";
 
 const page = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TriageHome",
+    "url": "https://triagehome.com",
+    "logo": "https://triagehome.com/triagelogowhite.png",
+    "description": "Revolutionizing Healthcare Access with premium home nursing and concierge medical services.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Nigeria"
+    },
+    "sameAs": [
+      "https://facebook.com/triagehome",
+      "https://twitter.com/triagehome",
+      "https://instagram.com/triagehome"
+    ]
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
      
       <WhyChooseUs/>
