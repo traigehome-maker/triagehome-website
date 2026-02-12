@@ -18,7 +18,7 @@ const OurServicesData = [
     img: "/triagepodsImg.png",
     // title: "TriageConcierge",
     description:
-    "Allows us to reach the last mile, providing services in mobile Prefab mobile containers.",
+    "Allows us to reach the last mile, providing services in mobile prefab mobile containers.",
 
   },
   {

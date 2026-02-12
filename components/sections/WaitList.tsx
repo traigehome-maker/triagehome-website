@@ -97,7 +97,7 @@ const WaitList = () => {
       setIsSubmitting(false);
     }
   };
-  const servicesOptions = ["Home Care", "Consultation", "Emergency"];
+  const servicesOptions = ["Home Care", "Partnership (hospitals, clinics, etc...", "VIP Concierge"];
 
   return (
     <section id="waitlist" className="md:max-w-7xl mx-auto  md:px-8 mb-10 md:mb-20">
@@ -149,8 +149,8 @@ const WaitList = () => {
                 <option value="" disabled className="text-gray-400">
                   Select account type
                 </option>
-                <option value="patient">Patient</option>
-                <option value="health_worker">Health Worker</option>
+                <option value="client">Client</option>
+                <option value="clinical_provider">Clinical Provider</option>
               </select>
               <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">
                 <ChevronDown className="text-gray-600 w-5 h-5" />

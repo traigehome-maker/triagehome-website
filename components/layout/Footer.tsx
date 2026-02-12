@@ -24,7 +24,8 @@ const Footer = () => {
         onClose={() => setIsPrivacyOpen(false)} 
       />
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-10 md:gap-8 mb-16">
+        <div className="flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-10 md:gap-8 mb-16">
           {/* Column 1: Brand & Contact */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="mb-2">
@@ -62,7 +63,7 @@ const Footer = () => {
               How it works
             </Link>
             <Link href="/#faq" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit">
-              FAQ
+              FAQs
             </Link>
             <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit">
               About us
@@ -140,6 +141,9 @@ const Footer = () => {
               </a> */}
             </div>
           </div>
+        </div>
+
+        <p>Made In Africa</p>
         </div>
 
         {/* Optional Copyright - Layout doesn't explicitly show it but it's good practice */}

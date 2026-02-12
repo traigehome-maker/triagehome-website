@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "How does payment work?",
-    a: "For Standard Care, you can view transparent, upfront pricing for each service in the app and pay securely via a payment gateway, card or bank transfer. For Triage Concierge and corporate partners, we offer structured billing cycles and detailed invoices. As we scale, we also plan to partner with select insurance providers and HMOs.",
+    a: "For Standard Care, you can view transparent, upfront pricing for each service in the app and pay securely via a payment gateway, card or bank transfer. For TriageConcierge and corporate partners, we offer structured billing cycles and detailed invoices. As we scale, we also plan to partner with select insurance providers and HMOs.",
   },
   {
     q: "Can you help with long-term care for an elderly family member?",
@@ -37,7 +37,7 @@ const faqs = [
         reduce absenteeism, boost productivity, and demonstrate care for your teams well-being. We
         offer both standard service packages and premium concierge plans for executives.
         Interested in a tailored proposal? Please contact our partnerships team at
-        triage_home@gmail.com.`,
+        traigehome@gmail.com.`,
   },
 ];
 

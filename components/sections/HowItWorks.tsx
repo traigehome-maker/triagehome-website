@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const HowItWorksData = [
   {
-    step: "Step",
+    step: "Step 1",
     img: "/describeIcon.png",
     title: "Describe Your Needs",
     description:
@@ -21,7 +21,7 @@ const HowItWorksData = [
       "Our algorithm instantly matches you with verified healthcare provider.",
   },
   {
-    step: "Step",
+    step: "Step 3",
     img: "/doorstepIcon.png",
     title: "Care at Your Doorstep",
     description: "Receive quality care in the comfort of your home.",
@@ -56,7 +56,7 @@ export default function HowItWorks() {
               key={i}
               variants={fadeUp}
               className={`p-5 rounded-2xl text-white  ${
-                step.step === "Step" ? "bg-[#01B89A]" : "bg-[#B846D9]"
+                step.step === "Step 2" ? "bg-[#B846D9] " : " bg-[#01B89A]"
               } space-y-4`}
             >
               <div className=" ">
