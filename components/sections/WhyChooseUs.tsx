@@ -14,7 +14,7 @@ const WhyChooseUsData = [
   },
   {
     tag: "Comfort",
-    img: "/notravels.png",
+    img: "/notravel.png",
     title: "No Travel. No Waiting",
     description:
       "Skip hospital queues and long commutes. We bring timely, dependable care directly to you when you need it.",

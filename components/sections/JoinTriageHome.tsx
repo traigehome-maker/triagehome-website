@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import Container from "../ui/Container";
 import { Button } from "../ui/Button";
+import { FaApple } from "react-icons/fa";
 
 const JoinTriageHome = () => {
   return (
@@ -30,10 +31,32 @@ const JoinTriageHome = () => {
 
         <div className="">
           <h4 className="font-semibold text-2xl md:text-3xl leading-10 text-primaryblue">Join TriageHome</h4>
-          <p className="w-[90%] text-sm md:text-base text-[#505050] mt-4 mb-6">Join the future of homecare with TriageHome: Coming Soon on Android and IOS</p>
-          <Link href="/#waitlist">
+          <p className="w-[90%] text-sm md:text-base text-[#505050] mt-4 mb-6">Join the future of homecare with TriageHome: </p>
+          <div className="flex max-md:flex-col gap-4">
+            <button type="button" className="flex items-center gap-2 border-2 border-primaryblue rounded-lg py-1 px-2">
+            <Image
+              src="/icons/googleplay.png"
+              alt="Triage Home care"
+              height={30}
+              width={30}
+              className=""
+            />
+            <div className="text-black">
+              <p>Coming soon on</p>
+              <p>Google Play</p>
+            </div>
+          </button>
+          <button type="button" className="flex items-center gap-2 border-2 border-primaryblue rounded-lg py-1 px-2">
+            <FaApple size={30} className="text-black"/>
+            <div className="text-black">
+              <p>Coming soon on</p>
+              <p>App Store</p>
+            </div>
+          </button>
+          </div>
+          {/* <Link href="/#waitlist">
             <Button>Join the waitlist</Button>
-          </Link>
+          </Link> */}
         </div>
 
         </div>

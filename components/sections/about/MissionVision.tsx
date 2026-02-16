@@ -9,14 +9,14 @@ const missionVisionData = [
     title: "Our Mission",
     description:
       "To bring professional and compassionate healthcare into every home, empowering people and building healthier communities.",
-    image: "/images/about/missionImg.png",
+    image: "/images/about/missionImage.png",
     bgColor: "bg-[#0A4A5C]",
   },
   {
     title: "Our Vision",
     description:
       "To make quality healthcare accessible at home, starting in Nigeria and expanding across emerging markets.",
-    image: "/images/about/visionImg.png",
+    image: "/images/about/visionImage.png",
     bgColor: "bg-[#B87333]",
   },
 ];
