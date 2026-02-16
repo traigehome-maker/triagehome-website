@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Mobile Menu Icon */}
         <button className="lg:hidden" onClick={() => setOpen(!open)}>
           {open ? (
-            <X size={32} />
+            <X size={32}  className="text-white"/>
           ) : (
             <IoMenu size={32} className="w-16 h-7 text-white" />
           )}
