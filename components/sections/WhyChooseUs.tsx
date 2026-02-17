@@ -7,7 +7,7 @@ import Image from "next/image";
 const WhyChooseUsData = [
   {
     tag: "Ease",
-    img: "/comfortfirstcare.png",
+    img: "/comfortcare.png",
     title: "Comfort-First Care",
     description:
       "Receive professional healthcare in the comfort of your home, where healing feels natural, familiar, and less stressful.",
