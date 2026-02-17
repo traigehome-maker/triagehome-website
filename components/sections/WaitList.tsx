@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Check, ChevronDown } from "lucide-react";
 
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const WaitList = () => {
   const [formData, setFormData] = useState<{
@@ -20,7 +20,6 @@ const WaitList = () => {
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -39,7 +38,7 @@ const WaitList = () => {
   }, []);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -57,19 +56,23 @@ const WaitList = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    console.log(formData)
+    console.log(formData);
 
     try {
-       const response = await fetch('/api/submit-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        "/api/submit-form",
+        // "/https://script.google.com/macros/s/AKfycbyHQepIJrWenTUtxlNCZ7aUonSj1M4mP6PIReotH5vdk7BK6du2B4v78g6Mj3a6JfQ0/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         },
-        body: JSON.stringify(formData),
-      });
+      );
 
       const data = await response.json();
-      console.log(data)
+      console.log(data);
       // const response = await fetch("/api/waitlist", {
       //   method: "POST",
       //   headers: { "Content-Type": "application/json" },
@@ -87,7 +90,10 @@ const WaitList = () => {
           services: [],
         });
       } else {
-        const errorMsg = data.error || data.message || "Something went wrong. Please try again.";
+        const errorMsg =
+          data.error ||
+          data.message ||
+          "Something went wrong. Please try again.";
         toast.error(errorMsg);
       }
     } catch (error) {
@@ -97,22 +103,28 @@ const WaitList = () => {
       setIsSubmitting(false);
     }
   };
-  const servicesOptions = ["Home Care", "Partnership (hospitals, clinics, etc...", "VIP Concierge"];
+  const servicesOptions = [
+    "Home Care",
+    "Partnership (hospitals, clinics, etc...",
+    "VIP Concierge",
+  ];
 
   return (
-    <section id="waitlist" className="md:max-w-7xl mx-auto  md:px-8 mb-10 md:mb-20">
-      
-        <div className="bg-[#B67A26] rounded-4xl px-4 py-16 md:py-20 ">
-          <div className=" flex flex-col items-center text-center max-w-2xl mx-auto">
+    <section
+      id="waitlist"
+      className="md:max-w-7xl mx-auto  md:px-8 mb-10 md:mb-20"
+    >
+      <div className="bg-[#B67A26] rounded-4xl px-4 py-16 md:py-20 ">
+        <div className=" flex flex-col items-center text-center max-w-2xl mx-auto">
           {/* Logo Pill */}
           <div className="bg-primaryblue px-8 py-2 rounded-2xl shadow-lg">
             <Image
-                      src="/triagelogowhite.png"
-                      alt="Triage Logo"
-                      width={161}
-                      height={40}
-                      priority
-                    />
+              src="/triagelogowhite.png"
+              alt="Triage Logo"
+              width={161}
+              height={40}
+              priority
+            />
           </div>
 
           <h3 className="text-2xl md:text-4xl text-white font-semibold mt-6 mb-4 drop-shadow-sm">
@@ -121,8 +133,6 @@ const WaitList = () => {
           <p className="text-white/90 text-xs md:text-sm mb-10 font-light">
             Get exclusive access and be the first to know when we launch.
           </p>
-
-
 
           <form
             onSubmit={handleSubmit}
@@ -193,7 +203,9 @@ const WaitList = () => {
                         }`}
                       >
                         <span>{option}</span>
-                        {isSelected && <Check className="w-5 h-5 text-[#023150]" />}
+                        {isSelected && (
+                          <Check className="w-5 h-5 text-[#023150]" />
+                        )}
                       </div>
                     );
                   })}
@@ -217,8 +229,7 @@ const WaitList = () => {
             </button>
           </form>
         </div>
-        </div>
-      
+      </div>
     </section>
   );
 };
