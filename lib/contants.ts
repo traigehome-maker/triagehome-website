@@ -24,7 +24,7 @@ export const projects = [
     title: "Chronic Disease Management",
     description:
       "Ongoing support for conditions like diabetes and hypertension, including regular glucose and blood pressure checks, medication guidance, and empowering patient education.",
-    src: "/images/chronic-disease.png",
+    src: "/images/ivtherapy.png",
     view: "",
     website: "",
     color: "#B846D9",
@@ -34,7 +34,7 @@ export const projects = [
     title: "IV Therapy",
     description:
       "Administration of prescribed IV fluids, vitamins, or medications.",
-    src: "/images/ivtherapy.png",
+    src: "/images/chronic-disease.png",
     view: "",
     website: "",
     color: "#A6D300",
@@ -70,9 +70,7 @@ export const projects = [
     color: "#AD7132",
     bgColor: "#EEE8E2",
   },
-  
 ];
-
 
 // export const projects = [
 //   {
@@ -146,5 +144,5 @@ export const projects = [
 //     color: "#722D65",
 //     bgColor: "#FFEDFB",
 //   },
-  
+
 // ];

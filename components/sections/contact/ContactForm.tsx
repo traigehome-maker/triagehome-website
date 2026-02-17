@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 interface FormData {
   name: string;
@@ -28,7 +28,6 @@ const ContactForm = () => {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
@@ -51,7 +50,7 @@ const ContactForm = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -70,7 +69,7 @@ const ContactForm = () => {
 
     setIsSubmitting(true);
 
-    console.log(formData)
+    console.log(formData);
 
     try {
       const response = await fetch("/api/contact", {
@@ -82,21 +81,21 @@ const ContactForm = () => {
       });
 
       const data = await response.json();
-      console.log(data)
+      console.log(data);
 
       if (response.ok) {
         toast.success("Thank you! Your message has been sent successfully.");
 
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        const errorMsg = data.message || "Something went wrong. Please try again.";
+        const errorMsg =
+          data.message || "Something went wrong. Please try again.";
         toast.error(errorMsg);
-
       }
     } catch (error) {
       toast.error("Failed to send message. Please try again later.");
 
-      console.log(error); 
+      console.log(error);
     } finally {
       setIsSubmitting(false);
     }
@@ -131,7 +130,7 @@ const ContactForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-0 md:space-y-0">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
               {/* Name Input */}
               <div>
                 <input
@@ -226,8 +225,6 @@ const ContactForm = () => {
               >
                 {isSubmitting ? "Sending..." : "Leave us a message"}
               </motion.button>
-
-
             </form>
           </motion.div>
         </div>
