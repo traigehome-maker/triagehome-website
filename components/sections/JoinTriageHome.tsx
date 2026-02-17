@@ -21,44 +21,53 @@ const JoinTriageHome = () => {
         </motion.h3> */}
 
         <div className="relative bg-white/60 border-2 grid md:grid-cols-2 items-center justify-center gap-5 md:gap-10 lg:gap-20 border-white p-10 rounded-2xl">
-        <Image
-          src="/jointriage.png"
-          alt="Triage Home care"
-          height={440}
-          width={591}
-          className=""
-        />
+          <Image
+            src="/jointriage.png"
+            alt="Triage Home care"
+            height={440}
+            width={591}
+            className=""
+          />
 
-        <div className="">
-          <h4 className="font-semibold text-2xl md:text-3xl leading-10 text-primaryblue">Join TriageHome</h4>
-          <p className="w-[90%] text-sm md:text-base text-[#505050] mt-4 mb-6">Join the future of homecare with TriageHome: </p>
-          <div className="flex max-md:flex-col gap-4">
-            <button type="button" className="flex items-center gap-2 border-2 border-primaryblue rounded-lg py-1 px-2">
-            <Image
-              src="/icons/googleplay.png"
-              alt="Triage Home care"
-              height={30}
-              width={30}
-              className=""
-            />
-            <div className="text-black">
-              <p>Coming soon on</p>
-              <p>Google Play</p>
+          <div className="">
+            <h4 className="font-semibold text-2xl md:text-3xl leading-10 text-primaryblue">
+              Join TriageHome
+            </h4>
+            <p className="w-[90%] text-sm md:text-base text-[#505050] mt-4 mb-6">
+              Join the future of homecare with TriageHome:{" "}
+            </p>
+            <div className="flex max-md:flex-col gap-4">
+              <button
+                type="button"
+                className="flex items-center gap-2 border-2 border-primaryblue rounded-lg py-1 px-2"
+              >
+                <Image
+                  src="/icons/googleplay.png"
+                  alt="Triage Home care"
+                  height={30}
+                  width={30}
+                  className=""
+                />
+                <div className="text-black">
+                  <p>Coming soon on</p>
+                  <p>Google Play</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className="flex items-center gap-2 border-2 border-primaryblue rounded-lg py-1 px-2"
+              >
+                <FaApple size={30} className="text-black" />
+                <div className="text-black">
+                  <p>Coming soon on</p>
+                  <p>App Store</p>
+                </div>
+              </button>
             </div>
-          </button>
-          <button type="button" className="flex items-center gap-2 border-2 border-primaryblue rounded-lg py-1 px-2">
-            <FaApple size={30} className="text-black"/>
-            <div className="text-black">
-              <p>Coming soon on</p>
-              <p>App Store</p>
-            </div>
-          </button>
-          </div>
-          {/* <Link href="/#waitlist">
+            {/* <Link href="/#waitlist">
             <Button>Join the waitlist</Button>
           </Link> */}
-        </div>
-
+          </div>
         </div>
       </Container>
     </section>

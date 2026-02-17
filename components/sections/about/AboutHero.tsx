@@ -24,7 +24,7 @@ export default function AboutHero() {
               variants={fadeUp}
               initial="hidden"
               whileInView="show"
-              className="text-white leading-7 text-base md:text-xl"
+              className="text-white leading-none text-base md:text-xl"
             >
               A future where quality healthcare meets you exactly where you are.
             </motion.p>

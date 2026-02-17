@@ -23,7 +23,8 @@ const WhyChooseUsData = [
     tag: "Assurance",
     img: "/trustedmedicals.png",
     title: "Trusted Medical Professionals",
-    description: "All our nurses and care providers are licensed, vetted, and trained to deliver safe, compassionate care you can rely on.",
+    description:
+      "All our nurses and care providers are licensed, vetted, and trained to deliver safe, compassionate care you can rely on.",
   },
 ];
 
@@ -39,7 +40,10 @@ export default function WhyChooseUs() {
         >
           Why Choose Us
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal md:w-2xl mx-auto text-center">TriageHome brings quality healthcare to your home making care more personal, accessible, and stress-free.</p>
+        <p className="mt-4 mb-8 text-[#505050] text-base leading-none font-normal md:w-2xl mx-auto text-center">
+          TriageHome brings quality healthcare to your home making care more
+          personal, accessible, and stress-free.
+        </p>
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -64,12 +68,19 @@ export default function WhyChooseUs() {
                 />
               </div>
               <div className="w-full h-full px-4 pt-5 pb-4">
-                <p className={`${step.tag === "Ease" ? "bg-[#A6D201]" : step.tag === "Comfort" ? "bg-[#00B89D]" : step.tag === "Assurance" ? "bg-primaryorange" : "bg-[#B846D9]"} px-3.5 py-0.5 rounded-full text-white text-sm w-fit`}>{step.tag}</p>
-                <h3 className="font-medium text-[#212121] text-xl mt-[10px] mb-[12px]">
-                    {step.title}
+                <p
+                  className={`${step.tag === "Ease" ? "bg-[#A6D201]" : step.tag === "Comfort" ? "bg-[#00B89D]" : step.tag === "Assurance" ? "bg-primaryorange" : "bg-[#B846D9]"} px-3.5 py-0.5 rounded-full text-white text-sm w-fit`}
+                >
+                  {step.tag}
+                </p>
+                <h3 className="font-medium text-[#212121] text-xl  mb-[12px]">
+                  {step.title}
                 </h3>
-              {/* <p className="text-gray-400">{step.title}</p> */}
-              <p className="text-black leading-6 text-base">{step.description}</p></div>
+                {/* <p className="text-gray-400">{step.title}</p> */}
+                <p className="text-black leading-none text-base">
+                  {step.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

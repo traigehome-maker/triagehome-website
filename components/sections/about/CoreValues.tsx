@@ -105,7 +105,7 @@ export default function CoreValues() {
 
               {/* Description */}
               <div className="px-4 pb-6 mt-10">
-                <p className="text-[#505050] font-semibold text-sm md:text-base leading-relaxed">
+                <p className="text-[#505050] font-semibold text-sm md:text-base leading-none">
                 {value.description}
               </p>
               </div>

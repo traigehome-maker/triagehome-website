@@ -56,7 +56,7 @@ export default function MissionVision() {
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm md:text-base leading-relaxed opacity-95">
+                <p className="text-sm md:text-base leading-none opacity-95">
                   {item.description}
                 </p>
               </div>

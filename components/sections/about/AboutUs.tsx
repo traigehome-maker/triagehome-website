@@ -19,7 +19,7 @@ export const AboutUs = () => {
           >
             <div className="relative">
               <Image
-                src="/images/about/aboutImg.png"
+                src="/images/about/aboutImage.png"
                 alt="TriageHome Team"
                 width={431}
                 height={464}
@@ -34,13 +34,11 @@ export const AboutUs = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="order-1 lg:order-2 w-full lg:max-w-3xl space-y-6"
+            className="order-1 lg:order-2 w-full lg:max-w-3xl space-y-0"
           >
-            <h2 className="header3 text-center lg:text-left">
-              About Us
-            </h2>
+            <h2 className="header3 text-center lg:text-left">About Us</h2>
 
-            <div className="space-y-3 text-[#505050] text-base md:text-lg leading-relaxed text-justify lg:text-left">
+            <div className="space-y-0 text-[#505050] text-base md:text-lg leading-none text-justify lg:text-left">
               <p>
                 At TriageHome, we see a future where quality healthcare meets
                 you exactly where you are. We also believe the best place to
@@ -75,4 +73,4 @@ export const AboutUs = () => {
       </Container>
     </section>
   );
-}
+};

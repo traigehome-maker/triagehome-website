@@ -30,7 +30,10 @@ const HowItWorksData = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className=" relative bg-white text-white py-10 lg:py-24 overflow-x-hidden">
+    <section
+      id="how-it-works"
+      className=" relative bg-white text-white py-10 lg:py-24 overflow-x-hidden"
+    >
       <div className="absolute rounded-full top-6 -right-32 h-[287px] w-[287px] bg-[#A6D20180]/50"></div>
       <div className="absolute rounded-full bottom-6 -left-32 h-[287px] w-[287px] bg-[#A6D20180]/50"></div>
       <Container>
@@ -42,8 +45,9 @@ export default function HowItWorks() {
         >
           How It Works
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-6 font-normal md:w-2xl mx-auto text-center">Quality Care in Three Simple Steps.</p>
-
+        <p className="mt-4 mb-8 text-[#505050] text-base leading-none font-normal md:w-2xl mx-auto text-center">
+          Quality Care in Three Simple Steps.
+        </p>
 
         <motion.div
           variants={stagger}

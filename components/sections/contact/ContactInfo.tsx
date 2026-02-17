@@ -108,7 +108,7 @@ const ContactInfo = () => {
                       {section.email}
                     </motion.a>
                   ) : (
-                    <div className="space-y-2">
+                    <div className="space-y-0">
                       {section.links?.map((link, linkIndex) => (
                         <motion.a
                           key={linkIndex}

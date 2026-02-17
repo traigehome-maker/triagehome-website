@@ -131,7 +131,7 @@ const ContactForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-0 md:space-y-0">
               {/* Name Input */}
               <div>
                 <input
