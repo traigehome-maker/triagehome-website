@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
                 >
                   {step.tag}
                 </p>
-                <h3 className="font-medium text-[#212121] text-xl  mb-[12px]">
+                <h3 className="font-medium text-[#212121] text-xl mb:[12px]">
                   {step.title}
                 </h3>
                 {/* <p className="text-gray-400">{step.title}</p> */}
