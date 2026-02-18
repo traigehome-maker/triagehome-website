@@ -48,6 +48,6 @@ body {
 
   .header-raleway {
     font-family: var(--font-raleway);
-    @apply;
+    @apply font-bold;
   }
 }
