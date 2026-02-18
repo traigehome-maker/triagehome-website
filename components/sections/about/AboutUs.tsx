@@ -38,7 +38,7 @@ export const AboutUs = () => {
           >
             <h2 className="header3 text-center lg:text-left">About Us</h2>
 
-            <div className="space-y-0 text-[#505050] text-base md:text-lg leading-none text-justify lg:text-left">
+            <div className="space-y-3 mt-3 text-[#505050] text-base md:text-lg leading-none text-justify lg:text-left">
               <p>
                 At TriageHome, we see a future where quality healthcare meets
                 you exactly where you are. We also believe the best place to

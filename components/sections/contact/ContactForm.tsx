@@ -113,7 +113,7 @@ const ContactForm = () => {
             transition={{ duration: 0.6 }}
             className="lg:sticky lg:top-24"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003D5B] leading-tight mb-4">
+            <h1 className="text-3xl header-raleway md:text-5xl lg:text-6xl font-bold text-[#003D5B] leading-tight mb-4">
               Ready to Experience
               <br />
               Better Care

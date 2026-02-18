@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
         >
           Why Choose Us
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-none font-normal md:w-2xl mx-auto text-center">
+        <p className="mt-4 mb-8 text-black text-base leading-none font-medium md:w-2xl mx-auto text-center">
           TriageHome brings quality healthcare to your home making care more
           personal, accessible, and stress-free.
         </p>
@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
                 >
                   {step.tag}
                 </p>
-                <h3 className="font-medium text-[#212121] text-xl mb:[12px]">
+                <h3 className="font-medium mt-3 mb-2 text-[#212121] text-xl mb:[12px]">
                   {step.title}
                 </h3>
                 {/* <p className="text-gray-400">{step.title}</p> */}

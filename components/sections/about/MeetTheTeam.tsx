@@ -7,17 +7,26 @@ import { FaLinkedin } from "react-icons/fa";
 
 const teamMembers = [
   {
-    name: "Dr Ifunaya",
+    name: "Ifunanya Nwokedi, Phd",
     role: "Chief Executive Officer(CEO)",
     image: "/images/about/IfunayaImg.png",
-    linkedin: "https://linkedin.com/in/ifunaya",
+    linkedin:
+      "https://www.linkedin.com/in/ifunanya-nwokedi-ph-d-b30a3815?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    name: "Mr. Femi Akinpelu ",
+    name: "Barr. Femi Akinpelu ",
     qualification: "LLB,BL,LLM ",
-    role: "Medical Advisor",
+    role: "Legal Advisor",
     image: "/images/about/lawyer.png",
-    linkedin: "https://linkedin.com/in/ifunaya",
+    linkedin: "https://linkedin.com/in/femi-akinpelu-5a4024a5",
+  },
+  {
+    name: "Babatunde Oduola-Owoo MD. ",
+    qualification: " ",
+    role: "Medical Advisor",
+    image: "/images/about/medicalAdvisor.png",
+    linkedin:
+      "https://www.linkedin.com/in/babatunde-oduola-owoo-m-d-104a64147?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   // {
   //   name: "Dr Ifunaya",
@@ -48,7 +57,7 @@ export default function MeetTheTeam() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 justify-center items-center  w-fit mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  justify-center items-center  w-fit mx-auto"
         >
           {teamMembers.map((member, index) => (
             <motion.div
@@ -57,8 +66,8 @@ export default function MeetTheTeam() {
               className="group relative"
             >
               {/* Card Container */}
-              <div className="relative w-[340px] h-[400px] rounded-t-[20px] rounded-b-[32px] md:rounded-[40px]  pt-5 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-[#AA7130]/30 border border-[#AA7130]">
-                <div className="absolute w-[340px] h-[400px] -left-3 top-3 rounded-t-[20px] rounded-b-[32px] md:rounded-[40px]">
+              <div className="relative w-[320px] md:w-[370px] h-[400px] rounded-t-[20px] rounded-b-[32px] md:rounded-[40px]  pt-5 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-[#AA7130]/30 border border-[#AA7130]">
+                <div className="absolute w-[320px] md:w-[370px] h-[400px] -left-3 top-3 rounded-t-[20px] rounded-b-[32px] md:rounded-[40px]">
                   {/* Image */}
                   <div className="relative  ">
                     <Image
@@ -70,9 +79,9 @@ export default function MeetTheTeam() {
                     />
 
                     {/* Info Card Overlay */}
-                    <div className="absolute bottom-5 left-5 w-[90%] mx-auto bg-white rounded-2xl p-4 shadow-lg flex items-center justify-between">
+                    <div className="absolute bottom-5 left-2 w-[95%] mx-auto bg-white rounded-2xl p-4 shadow-lg flex items-center justify-between">
                       <div className="pr-2">
-                        <h3 className="text-lg md:text-lg font-semibold text-[#0A4A5C]">
+                        <h3 className="text-lg md:text-lg flex max-md:flex-col md:gap-2 md:items-center font-semibold text-[#0A4A5C]">
                           {member.name}{" "}
                           <span className="text-xs text-[#505050]">
                             {member.qualification}

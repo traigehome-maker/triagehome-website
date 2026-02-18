@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 
 import Container from "../ui/Container";
-import { Button } from "../ui/Button";
+
 import { FaApple } from "react-icons/fa";
 
 const JoinTriageHome = () => {
@@ -39,7 +38,7 @@ const JoinTriageHome = () => {
             <div className="flex max-md:flex-col gap-4">
               <button
                 type="button"
-                className="flex items-center gap-2 border-2 border-primaryblue rounded-lg py-1 px-2"
+                className="flex items-center gap-2 bg-black rounded-lg py-1 px-2"
               >
                 <Image
                   src="/icons/googleplay.png"
@@ -48,17 +47,17 @@ const JoinTriageHome = () => {
                   width={30}
                   className=""
                 />
-                <div className="text-black">
+                <div className="text-white">
                   <p>Coming soon on</p>
                   <p>Google Play</p>
                 </div>
               </button>
               <button
                 type="button"
-                className="flex items-center gap-2 border-2 border-primaryblue rounded-lg py-1 px-2"
+                className="flex items-center gap-2 bg-black rounded-lg py-1 px-2"
               >
-                <FaApple size={30} className="text-black" />
-                <div className="text-black">
+                <FaApple size={30} className="text-white" />
+                <div className="text-white">
                   <p>Coming soon on</p>
                   <p>App Store</p>
                 </div>

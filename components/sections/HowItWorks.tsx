@@ -45,7 +45,7 @@ export default function HowItWorks() {
         >
           How It Works
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-none font-normal md:w-2xl mx-auto text-center">
+        <p className="mt-4 mb-8 text-black text-base leading-none font-medium md:w-2xl mx-auto text-center">
           Quality Care in Three Simple Steps.
         </p>
 
@@ -72,11 +72,11 @@ export default function HowItWorks() {
                   className=""
                 />
               </div>
-              <h3 className="font-semibold  text-xl ">
+              <h3 className="font-bold  text-xl ">
                 {step.step} : {step.title}
               </h3>
               {/* <p className="text-gray-400">{step.title}</p> */}
-              <p className="text-sm text-base ">{step.description}</p>
+              <p className="text-sm ">{step.description}</p>
             </motion.div>
           ))}
         </motion.div>

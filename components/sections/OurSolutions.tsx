@@ -7,6 +7,7 @@ import Image from "next/image";
 const OurServicesData = [
   {
     tag: "TriageApp",
+    active: "",
     img: "/triageappImg.png",
     // title: "Standard Care",
     description:
@@ -14,6 +15,7 @@ const OurServicesData = [
   },
   {
     tag: "TriagePods",
+    active: "Coming Soon",
     img: "/triagepodsImg.png",
     // title: "TriageConcierge",
     description:
@@ -21,6 +23,7 @@ const OurServicesData = [
   },
   {
     tag: "TriageLiving",
+    active: "Coming Soon",
     img: "/triagelivingImg.png",
     description:
       "A 24/7 nurse-led, wellness-focused assisted-living model that merges clinical care with Eastern healing and modern hospitality.",
@@ -39,7 +42,7 @@ export default function OurSolutions() {
         >
           Our Solutions
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-none font-normal md:w-2xl mx-auto text-center">
+        <p className="mt-4 mb-8 text-black text-base leading-none font-medium md:w-2xl mx-auto text-center">
           How we achieve our mission to make quality healthcare accessible at
           home.
         </p>
@@ -57,7 +60,7 @@ export default function OurSolutions() {
                          " border "
                      space-y-3`}
             >
-              <div className="">
+              <div className="relative ">
                 <Image
                   src={step.img}
                   alt="Triage Home care"
@@ -65,6 +68,11 @@ export default function OurSolutions() {
                   width={397}
                   className=" rounded-t-2xl"
                 />
+                {step.active && (
+                  <div className="absolute top-3 right-3 bg-primaryorange text-white text-xs px-2 py-0.5 rounded-full">
+                    {step.active}
+                  </div>
+                )}
               </div>
               <div className="w-full h-full px-4  pb-4">
                 <p

@@ -26,7 +26,7 @@ export default function Parallaxmain() {
           >
             What We Do
           </motion.h2>
-          <p className="mt-4 text-[#505050] text-lg md:text-xl font-medium max-w-3xl mx-auto text-center px-4 leading-none">
+          <p className="mt-4 text-black text-lg md:text-xl font-medium max-w-3xl mx-auto text-center px-4 leading-none">
             For everyday wellness to complex recovery, our clinical team
             provides professional support across every stage of care.
           </p>

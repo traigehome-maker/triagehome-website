@@ -4,14 +4,15 @@ import Container from "@/components/ui/Container";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 const faqs = [
   {
     q: "How quickly can I get a clinical provider to my home?",
     a: "Our response depends on your service level. For Standard Care booked through our app, aqualified provider can typically be at your door within a few hours, depending on availability in your area. For our Triage Concierge members, we guarantee a rapid, priority response.",
   },
-  { q: "Are all your nurses qualified and vetted?", 
-    a: "Absolutely. Every clinical provider in our network is a licensed professional. They undergo a rigorous verification process that includes credential checks, background screening, and interviews. Your safety and trust are our top priorities." },
+  {
+    q: "Are all your nurses qualified and vetted?",
+    a: "Absolutely. Every clinical provider in our network is a licensed professional. They undergo a rigorous verification process that includes credential checks, background screening, and interviews. Your safety and trust are our top priorities.",
+  },
   {
     q: "What happens if I need help outside of business hours?",
     a: "We are here when you need us. While our Standard Care service operates on extended hours for booking from 6am – 9pm, 7 days a week. Our TriageConcierge service offers 24/7 access to a dedicated health coordinator for immediate assistance, any time of day or night.",
@@ -26,18 +27,20 @@ const faqs = [
   },
   {
     q: "How does TriageHome ensure patient and clinical providers safety?",
-    a: "We make safety our top priority for everyone. All our clinical providers are fully licensed an undergo thorough background checks. For your security, we use a verified platform for all bookings and communication. Providers also have access to safety features and support during visits. Our system allows for clear identification and two-way feedback after every appointment to maintain our high standards of care and trust.",
+    a: "We make safety our top priority for everyone. All our clinical providers are fully licensed and undergo thorough background checks. For your security, we use a verified platform for all bookings and communication. Providers also have access to safety features and support during visits. Our system allows for clear identification and two-way feedback after every appointment to maintain our high standards of care and trust.",
   },
   {
     q: "What partnerships are available for hospitals and corporate wellness?",
-    a: `We offer structured partnerships designed to solve specific challenges:- For Hospitals (Staffing Retainer Model) : We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs.       
-        For Corporate Wellness:
-        We become an extension of your employee benefits. We provide on-demand, in-home
-        healthcare services for your staff from post-surgery care to wellness checks helping to
-        reduce absenteeism, boost productivity, and demonstrate care for your teams well-being. We
-        offer both standard service packages and premium concierge plans for executives.
-        Interested in a tailored proposal? Please contact our partnerships team at
-        traigehome@gmail.com.`,
+    a: [
+      "We offer structured partnerships designed to solve specific challenges:",
+
+      "For Hospitals (Staffing Retainer Model): We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs.",
+
+      "For Corporate Wellness: We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your team’s well-being. We offer both standard service packages and premium concierge plans for executives.",
+
+      "Interested in a tailored proposal? Please contact our partnerships team at support@triage-home.com.",
+    ],
+    // a: "We offer structured partnerships designed to solve specific challenges:- \n\n For Hospitals (Staffing Retainer Model) : We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs. For Corporate Wellness We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your teams well-being. We offer both standard service packages and premium concierge plans for executives. Interested in a tailored proposal? Please contact our partnerships team at support@triage-home.com",
   },
 ];
 
@@ -49,22 +52,21 @@ export default function FAQ() {
       <Container>
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start">
           <div className="w-full lg:w-1/3">
-          {/* Left Side - Heading */}
-          
+            {/* Left Side - Heading */}
+
             <motion.h3
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              
-              className="lg:sticky lg:top-24 font-semibold text-2xl md:text-3xl lg:text-4xl mb-5 text-primaryblue"
+              className=" font-semibold text-2xl md:text-3xl lg:text-4xl mb-5 text-primaryblue"
             >
               Frequently Asked Questions
             </motion.h3>
-            
 
-            <p className="text-base md:text-lg text-gray-600">
-              Confused about what Traige does or need clarification about something? Learn more
+            <p className="text-base  md:text-lg text-gray-600">
+              Confused about what Traige does or need clarification about
+              something? Learn more
             </p>
           </div>
 
@@ -84,7 +86,7 @@ export default function FAQ() {
                 >
                   {/* Header */}
                   <div className="flex items-center justify-between gap-4">
-                    <p className="font-semibold text-base md:text-xl lg:text-2xl flex-1">
+                    <p className="font-semibold leading-5 text-base md:text-xl lg:text-2xl flex-1">
                       {faq.q}
                     </p>
 
@@ -107,8 +109,21 @@ export default function FAQ() {
                         transition={{ duration: 0.35, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="mt-4 md:mt-6 text-sm md:text-lg text-white/90">
-                          {faq.a}
+                        <div className="mt-4 md:mt-6 leading-5 text-sm md:text-lg text-white/90">
+                          {Array.isArray(faq.a) ? (
+                            <ul className="list-disc list-inside mt-2 space-y-1">
+                              {faq.a.map((item, index) => (
+                                <li
+                                  key={index}
+                                  className="text-sm md:text-base"
+                                >
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <p className="">{faq.a}</p>
+                          )}
                         </div>
                       </motion.div>
                     )}

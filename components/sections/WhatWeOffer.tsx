@@ -22,7 +22,7 @@ const WhatWeOfferData = [
   },
   {
     img: "/images/partnershipImg.png",
-    title: "Partnership",
+    title: "Partnerships",
     description:
       "Through strategic partnerships, we support hospitals with on-demand clinical staff and help organizations care for their people.",
   },
@@ -40,7 +40,7 @@ export default function WhatWeOffer() {
         >
           What We Offer
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-base leading-none font-normal md:w-2xl mx-auto text-center">
+        <p className="mt-4 mb-8 text-[#505050] text-lg leading-none font-semibold md:w-2xl mx-auto text-center">
           We offer three levels of services.
         </p>
         <motion.div
@@ -65,13 +65,13 @@ export default function WhatWeOffer() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-primaryblue/60 opacity-90 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-primaryblue/70 opacity-90 transition-opacity duration-300" />
 
                 <div className="relative z-10 space-y-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="font-medium text-white text-2xl mb-2 filter drop-shadow-md">
                     {step.title}
                   </h3>
-                  <p className="text-white/90 text-base font-light leading-none opacity-90">
+                  <p className="text-white text-base font-light leading-none ">
                     {step.description}
                   </p>
                   <Link href="/#waitlist">

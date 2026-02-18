@@ -24,7 +24,7 @@ export const projects = [
     title: "Chronic Disease Management",
     description:
       "Ongoing support for conditions like diabetes and hypertension, including regular glucose and blood pressure checks, medication guidance, and empowering patient education.",
-    src: "/images/ivtherapy.png",
+    src: "/images/chronicdisease.png",
     view: "",
     website: "",
     color: "#B846D9",
@@ -44,7 +44,7 @@ export const projects = [
     title: "Wellness Check",
     description:
       "A health review including basic vitals check, health risk assessment, and a supportive lifestyle consultation.",
-    src: "/images/wellness-check.png",
+    src: "/images/wellnessCheck.png",
     view: "",
     website: "",
     color: "#B16453",
@@ -54,7 +54,7 @@ export const projects = [
     title: "Selected Health Screening",
     description:
       "On-the-spot testing with our basic package, incuding rapid  tests for Malaria, Typhoid and HIV, alongside Blood Pressure, Blood Glucose, and BMI checks.",
-    src: "/images/selected-health.png",
+    src: "/images/selectedhealth.png",
     view: "",
     website: "",
     color: "#00B89E",

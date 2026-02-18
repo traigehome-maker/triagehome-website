@@ -7,13 +7,13 @@ const ContactInfo = () => {
   const contactSections = [
     {
       title: "For VIP Concierge Service",
-      email: "triage_home@gmail.com",
-      description: "Contact our dedicated team",
+      email: "support@triage-home.com",
+      description: "Contact our dedicated team:",
     },
     {
       title: "For Standard Nursing Services",
       email: null,
-      description: "Download our app from",
+      description: "Download our app from:",
       links: [
         { name: "Google play", url: "#" },
         { name: "Apple store", url: "#" },
@@ -21,8 +21,8 @@ const ContactInfo = () => {
     },
     {
       title: "For Hospital & Corporate Partnerships",
-      email: "triage_home@gmail.com",
-      description: "For customized solutions reach out",
+      email: "support@triage-home.com",
+      description: "For customized solutions reach out:",
     },
   ];
 
@@ -62,7 +62,7 @@ const ContactInfo = () => {
             <p className="text-sm md:text-base text-gray-500 mb-3 font-medium">
               Contact Us
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#003D5B] leading-tight">
+            <h2 className="text-3xl header-raleway md:text-4xl lg:text-5xl font-bold text-[#003D5B] leading-tight">
               We are always
               <br />
               happy to assist you
@@ -78,11 +78,7 @@ const ContactInfo = () => {
             className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
           >
             {contactSections.map((section, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="group"
-              >
+              <motion.div key={index} variants={itemVariants} className="group">
                 <div className="h-full">
                   {/* Title with underline */}
                   <div className="mb-6">

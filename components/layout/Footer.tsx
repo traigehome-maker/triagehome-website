@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-3 text-gray-300 text-sm md:text-base font-light">
-              <h4 className="font-bold text-xl text-white">Reach out</h4>
+              <h4 className="font-bold text-xl text-white">Reach Out</h4>
               <a
                 href="mailto:support@triage-home.com"
                 className="hover:text-white transition-colors w-fit"
@@ -66,7 +66,7 @@ const Footer = () => {
                 href="/#services"
                 className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit"
               >
-                Our services
+                Our Services
               </Link>
               <Link
                 href="/#how-it-works"
@@ -84,13 +84,13 @@ const Footer = () => {
                 href="/about"
                 className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit"
               >
-                About us
+                About Us
               </Link>
               <Link
                 href="/contact"
                 className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit"
               >
-                Contact us
+                Contact Us
               </Link>
             </div>
 
@@ -107,13 +107,13 @@ const Footer = () => {
                 onClick={() => setIsTermsOpen(true)}
                 className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit text-left"
               >
-                Terms and Condition
+                Terms and Conditions
               </button>
             </div>
 
             {/* Column 4: Socials */}
             <div className="flex flex-col gap-4">
-              <h4 className="font-bold text-xl text-white">Follow us</h4>
+              <h4 className="font-bold text-xl text-white">Follow Us</h4>
               <div className="flex items-center gap-6">
                 <a
                   href="https://instagram.com/triage.home"
