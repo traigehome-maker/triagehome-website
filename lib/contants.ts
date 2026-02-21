@@ -44,7 +44,7 @@ export const projects = [
     title: "Wellness Check",
     description:
       "A health review including basic vitals check, health risk assessment, and a supportive lifestyle consultation.",
-    src: "/images/wellnessCheck.png",
+    src: "/wellness-check.png",
     view: "",
     website: "",
     color: "#B16453",

@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
           Why Choose Us
         </motion.h2>
         <p className="mt-4 mb-8 text-black text-base leading-none font-medium md:w-2xl mx-auto text-center">
-          TriageHome brings quality healthcare to your home making care more
+          TriageHome brings quality healthcare to your home, making care more
           personal, accessible, and stress-free.
         </p>
         <motion.div

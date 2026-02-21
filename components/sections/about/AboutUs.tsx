@@ -23,7 +23,7 @@ export const AboutUs = () => {
                 alt="TriageHome Team"
                 width={431}
                 height={464}
-                className="w-full max-w-sm lg:max-w-md h-auto object-contain"
+                className="w-full lg:max-w-md "
               />
             </div>
           </motion.div>

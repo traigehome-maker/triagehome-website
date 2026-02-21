@@ -72,7 +72,7 @@ const Footer = () => {
                 href="/#how-it-works"
                 className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit"
               >
-                How it works
+                How it Works
               </Link>
               <Link
                 href="/#faq"

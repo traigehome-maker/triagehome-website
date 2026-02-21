@@ -127,7 +127,7 @@ const WaitList = () => {
             />
           </div>
 
-          <h3 className="text-2xl md:text-4xl text-white font-semibold mt-6 mb-4 drop-shadow-sm">
+          <h3 className="text-2xl header-raleway md:text-4xl text-white font-semibold mt-6 mb-4 drop-shadow-sm">
             Secure Your Spot, Join the Waitlist Now
           </h3>
           <p className="text-white/90 text-xs md:text-sm mb-10 font-light">

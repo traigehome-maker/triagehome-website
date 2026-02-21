@@ -10,7 +10,7 @@ const HowItWorksData = [
     img: "/describeIcon.png",
     title: "Describe Your Needs",
     description:
-      "Book an appointment for a specific service or a General Check-Up.",
+      "Book an appointment for a specific service or a general check-up.",
   },
   {
     step: "Step 2",

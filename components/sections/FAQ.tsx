@@ -34,11 +34,11 @@ const faqs = [
     a: [
       "We offer structured partnerships designed to solve specific challenges:",
 
-      "For Hospitals (Staffing Retainer Model): We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs.",
+      "-For Hospitals (Staffing Retainer Model): We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs.",
 
-      "For Corporate Wellness: We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your team’s well-being. We offer both standard service packages and premium concierge plans for executives.",
+      "-For Corporate Wellness: We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your team’s well-being. We offer both standard service packages and premium concierge plans for executives.",
 
-      "Interested in a tailored proposal? Please contact our partnerships team at support@triage-home.com.",
+      "-Interested in a tailored proposal? Please contact our partnerships team at support@triage-home.com.",
     ],
     // a: "We offer structured partnerships designed to solve specific challenges:- \n\n For Hospitals (Staffing Retainer Model) : We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs. For Corporate Wellness We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your teams well-being. We offer both standard service packages and premium concierge plans for executives. Interested in a tailored proposal? Please contact our partnerships team at support@triage-home.com",
   },
@@ -65,8 +65,8 @@ export default function FAQ() {
             </motion.h3>
 
             <p className="text-base  md:text-lg text-gray-600">
-              Confused about what Traige does or need clarification about
-              something? Learn more
+              Confused about what TriageHome does or need clarification about
+              something? Learn more.
             </p>
           </div>
 
@@ -111,7 +111,7 @@ export default function FAQ() {
                       >
                         <div className="mt-4 md:mt-6 leading-5 text-sm md:text-lg text-white/90">
                           {Array.isArray(faq.a) ? (
-                            <ul className="list-disc list-inside mt-2 space-y-1">
+                            <ul className=" list-inside mt-2 space-y-1">
                               {faq.a.map((item, index) => (
                                 <li
                                   key={index}
