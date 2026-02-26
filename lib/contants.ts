@@ -24,7 +24,7 @@ export const projects = [
     title: "Chronic Disease Management",
     description:
       "Ongoing support for conditions like diabetes and hypertension, including regular glucose and blood pressure checks, medication guidance, and empowering patient education.",
-    src: "/images/chronicdisease.png",
+    src: "/images/chronic-health.png",
     view: "",
     website: "",
     color: "#B846D9",
