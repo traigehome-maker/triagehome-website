@@ -7,22 +7,23 @@ import { FaLinkedin } from "react-icons/fa";
 
 const teamMembers = [
   {
-    name: "Ifunanya Nwokedi, Ph.D.",
+    name: "Ifunanya Nwokedi, ",
+    qualification: "Ph.D.",
     role: "Founder/Chief Executive Officer(CEO)",
     image: "/images/about/IfunayaImg.png",
     linkedin:
       "https://www.linkedin.com/in/ifunanya-nwokedi-ph-d-b30a3815?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    name: "Barrister Femi Akinpelu ",
+    name: "Femi Akinpelu ",
     qualification: "LL.B,BL,LL.M ",
     role: "Legal Advisor",
     image: "/images/about/lawyer.png",
     linkedin: "https://linkedin.com/in/femi-akinpelu-5a4024a5",
   },
   {
-    name: "Dr. Babatunde Oduola-Owoo, MD ",
-    qualification: " ",
+    name: "Babatunde Oduola-Owoo,  ",
+    qualification: "MD ",
     role: "Medical Advisor",
     image: "/images/about/medicalAdvisor.png",
     linkedin:

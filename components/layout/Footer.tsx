@@ -101,7 +101,7 @@ const Footer = () => {
                 onClick={() => setIsPrivacyOpen(true)}
                 className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit text-left"
               >
-                Privacy policy
+                Privacy Policy
               </button>
               <button
                 onClick={() => setIsTermsOpen(true)}

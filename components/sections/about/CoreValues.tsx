@@ -84,7 +84,7 @@ export default function CoreValues() {
             <motion.div
               key={index}
               variants={fadeUp}
-              className="bg-white relative  min-h-[290px]    md:h-[350px]  rounded-3xl   shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              className="bg-white relative  min-h-[290px]    md:h-[250px]  rounded-3xl   shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
               {/* Icon */}
               <div
