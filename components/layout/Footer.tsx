@@ -39,7 +39,10 @@ const Footer = () => {
               </Link>
               <div className="flex flex-col gap-3 text-gray-300 text-sm md:text-base font-light">
                 <p>HomeHealth Powered By People</p>
-                <p>Triage&copy;2026. All Rights Reserved</p>
+                <p>
+                  TriageHome making quality care accessible <br></br> anytime,
+                  anywhere.
+                </p>
               </div>
             </div>
 
@@ -163,8 +166,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          <p>Made In Africa</p>
         </div>
 
         {/* Optional Copyright - Layout doesn't explicitly show it but it's good practice */}
@@ -172,6 +173,17 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Triage Home. All rights reserved.
         </div> */}
       </Container>
+
+      <div className="border-t pt-2 border-white/10">
+        <Container>
+          <p className="flex items-center justify-between">
+            <span className=" text-gray-500 text-sm">Made In Africa</span>
+            <span className=" text-gray-500 text-sm">
+              TriageHome©2026. All Rights Reserved
+            </span>
+          </p>
+        </Container>
+      </div>
     </footer>
   );
 };

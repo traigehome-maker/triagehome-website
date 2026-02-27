@@ -67,15 +67,15 @@ export default function MeetTheTeam() {
               className="group relative"
             >
               {/* Card Container */}
-              <div className="relative w-[320px] md:w-[370px] h-[400px] rounded-t-[20px] rounded-b-[32px] md:rounded-[40px]  pt-5 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-[#AA7130]/30 border border-[#AA7130]">
-                <div className="absolute w-[320px] md:w-[370px] h-[400px] -left-3 top-3 rounded-t-[20px] rounded-b-[32px] md:rounded-[40px]">
+              <div className="relative w-[320px] md:w-[370px] h-[400px] rounded-b-[20px] rounded-tl-[20px] rounded-tr-[64px]  pt-5 shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-[#AA7130]/30 border border-[#AA7130]">
+                <div className="absolute w-[320px] md:w-[370px] h-[400px] -left-3 top-3 ">
                   {/* Image */}
                   <div className="relative  ">
                     <Image
                       src={member.image}
                       alt={member.name}
                       width={381}
-                      height={442}
+                      height={400}
                       className=""
                     />
 
@@ -84,7 +84,7 @@ export default function MeetTheTeam() {
                       <div className="pr-2">
                         <h3 className="text-lg md:text-lg flex max-md:flex-col md:gap-2 md:items-center font-semibold text-[#0A4A5C]">
                           {member.name}{" "}
-                          <span className="text-xs text-[#505050]">
+                          <span className="text-sm text-[#505050]">
                             {member.qualification}
                           </span>
                         </h3>
