@@ -24,7 +24,7 @@ const coreValuesData = [
   {
     title: "We Listen First (Empathy)",
     description:
-      "True care begins with listening. We take the time to understand notjust your medical needs but your personal story. We treat the person, not just the patient.",
+      "True care begins with listening. We take the time to understand not just your medical needs but your personal story. We treat the person, not just the patient.",
     iconColor: "bg-[#00B89D]",
     titleColor: "text-[#00B89D]",
     img:"/icons/tealIcon.png"

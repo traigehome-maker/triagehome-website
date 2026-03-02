@@ -33,37 +33,40 @@ export default function Navbar() {
           : "py-3 bg-primaryblue"
       }`}
     >
-      <div className="flex items-center max-w-7xl mx-auto justify-between px-4 lg:px-0">
+      <div className="flex items-center max-w-7xl mx-auto justify-between px-4 lg:px-6">
         {/* Logo */}
-        <Link href="/"><Image
-          src="/triagelogowhite.png"
-          alt="Triage Logo"
-          width={161}
-          height={40}
-          priority
-        /></Link>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/triagewhite.svg"
+            alt="Triage Logo"
+            width={161}
+            height={40}
+            priority
+            className=" w-auto"
+          />
+        </Link>
 
         {/* Desktop Links */}
-        <div className="hidden text-white font-normal text-base lg:flex gap-12">
-          <Link href="/">Home</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/#how-it-works">How it Works</Link>
-          <Link href="/contact">Contact Us</Link>
+        <div className="hidden text-white font-medium text-base lg:flex items-center gap-10">
+          <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
+          <Link href="/about" className="hover:text-white/80 transition-colors">About Us</Link>
+          <Link href="/#how-it-works" className="hover:text-white/80 transition-colors">How it Works</Link>
+          <Link href="/contact" className="hover:text-white/80 transition-colors">Contact Us</Link>
         </div>
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <Link href="/#waitlist">
-            <Button className="drop-shadow-2xl">Join the Waitlist</Button>
+            <Button className="drop-shadow-2xl px-8 hover:scale-105 transition-transform">Join the Waitlist</Button>
           </Link>
         </div>
 
         {/* Mobile Menu Icon */}
-        <button className="lg:hidden" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden p-2" onClick={() => setOpen(!open)}>
           {open ? (
-            <X size={32}  className="text-white"/>
+            <X size={28} className="text-white" />
           ) : (
-            <IoMenu size={32} className="w-16 h-7 text-white" />
+            <IoMenu size={32} className="text-white" />
           )}
         </button>
       </div>

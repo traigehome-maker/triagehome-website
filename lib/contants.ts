@@ -54,7 +54,7 @@ export const projects = [
     title: "Selected Health Screening",
     description:
       "On-the-spot testing with our basic package, incuding rapid  tests for Malaria, Typhoid and HIV, alongside Blood Pressure, Blood Glucose, and BMI checks.",
-    src: "/images/selectedhealth.png",
+    src: "/images/health-screening.png",
     view: "",
     website: "",
     color: "#00B89E",
