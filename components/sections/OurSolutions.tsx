@@ -82,7 +82,7 @@ export default function OurSolutions() {
                 </p>
 
                 {/* <p className="text-gray-400">{step.title}</p> */}
-                <p className="text-black leading-none text-base">
+                <p className="text-black leading-none text-base font-semibold">
                   {step.description}
                 </p>
               </div>

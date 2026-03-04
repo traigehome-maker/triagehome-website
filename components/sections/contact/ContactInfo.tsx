@@ -65,7 +65,7 @@ const ContactInfo = () => {
             <h2 className="text-3xl header-raleway md:text-4xl lg:text-5xl font-bold text-[#003D5B] leading-tight">
               We are always
               <br />
-              happy to assist you
+              happy to assist you.
             </h2>
           </motion.div>
 
