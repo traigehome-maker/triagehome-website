@@ -22,7 +22,7 @@ const ContactInfo = () => {
     {
       title: "For Hospital & Corporate Partnerships",
       email: "support@triage-home.com",
-      description: "For customized solutions reach out:",
+      description: "For customized solutions, reach out:",
     },
   ];
 

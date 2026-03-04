@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { FaInstagram } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa6";
+import { FaApple, FaWhatsapp } from "react-icons/fa6";
 import TermsAndConditionsModal from "../modals/TermsAndConditionsModal";
 import PrivacyPolicyModal from "../modals/PrivacyPolicyModal";
 
@@ -30,15 +30,16 @@ const Footer = () => {
             <div className="flex flex-col gap-6">
               <Link href="/" className="mb-2">
                 <Image
-                  src="/triagelogowhite.png"
-                  alt="Triage Logo"
-                  width={160}
-                  height={40}
-                  className="w-auto h-8 md:h-10"
-                />
+                            src="/triagewhite.svg"
+                            alt="Triage Logo"
+                            width={160}
+                            height={40}
+                            priority
+                            className=" w-auto object-contain"
+                          />
               </Link>
               <div className="flex flex-col gap-3 text-gray-300 text-sm md:text-base font-light">
-                <p>HomeHealth Powered By People</p>
+                <p>HomeHealth Powered By People,</p>
                 <p>
                   TriageHome making quality care accessible <br></br> anytime,
                   anywhere.
@@ -58,7 +59,7 @@ const Footer = () => {
                 href="tel:+2349134664547"
                 className="hover:text-white transition-colors w-fit"
               >
-                +2349134664547
+                +234-9134664547
               </a>
             </div>
 
@@ -99,19 +100,19 @@ const Footer = () => {
 
             {/* Column 3: Legal Links */}
             <div className="flex flex-col gap-4">
-              <h4 className="font-bold text-xl text-white">Terms</h4>
-              <button
-                onClick={() => setIsPrivacyOpen(true)}
-                className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit text-left"
+              <h4 className="font-bold text-xl text-white">About Us</h4>
+              <Link
+                href="/about/#corevalues"
+                className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit"
               >
-                Privacy Policy
-              </button>
-              <button
-                onClick={() => setIsTermsOpen(true)}
-                className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit text-left"
+                Our Core Values
+              </Link>
+              <Link
+                href="/about/#team"
+                className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit"
               >
-                Terms and Conditions
-              </button>
+                The Team
+              </Link>
             </div>
 
             {/* Column 4: Socials */}
@@ -164,6 +165,36 @@ const Footer = () => {
                 <FaLinkedinIn size={24} />
               </a> */}
               </div>
+
+
+              <div className="grid mt-5 gap-4">
+                            <button
+                              type="button"
+                              className="flex w-fit items-center gap-2 bg-black rounded-lg py-1 px-2"
+                            >
+                              <Image
+                                src="/icons/googleplay.png"
+                                alt="Triage Home care"
+                                height={25}
+                                width={25}
+                                className=""
+                              />
+                              <div className="text-white">
+                                <p>Coming soon on</p>
+                                <p>Google Play</p>
+                              </div>
+                            </button>
+                            <button
+                              type="button"
+                              className="flex w-fit items-center gap-2 bg-black rounded-lg py-1 px-2"
+                            >
+                              <FaApple size={25} className="text-white" />
+                              <div className="text-white">
+                                <p>Coming soon on</p>
+                                <p>App Store</p>
+                              </div>
+                            </button>
+                          </div>
             </div>
           </div>
         </div>
@@ -176,12 +207,27 @@ const Footer = () => {
 
       <div className="border-t pt-2 border-white/10">
         <Container>
-          <p className="flex items-center justify-between">
-            <span className=" text-gray-500 text-sm">Made In Africa</span>
-            <span className=" text-gray-500 text-sm">
+          <div className="flex max-md:flex-col text-gray-300 text-sm items-center justify-between">
+            <span className=" ">Made In Africa</span>
+            <div className="flex max-md:flex-col justify-between items-center gap-2 my-2 md:gap-4">
+              
+              <button
+                onClick={() => setIsPrivacyOpen(true)}
+                className="cursor-pointer "
+              >
+                Privacy Policy
+              </button>
+              <button
+                onClick={() => setIsTermsOpen(true)}
+                className=" cursor-pointer"
+              >
+                Terms and Conditions
+              </button>
+            </div>
+            <span className="  text-sm">
               TriageHome©2026. All Rights Reserved
             </span>
-          </p>
+          </div>
         </Container>
       </div>
     </footer>

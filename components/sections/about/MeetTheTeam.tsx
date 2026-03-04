@@ -15,15 +15,15 @@ const teamMembers = [
       "https://www.linkedin.com/in/ifunanya-nwokedi-ph-d-b30a3815?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
-    name: "Femi Akinpelu ",
-    qualification: "LL.B,BL,LL.M ",
+    name: "Femi Akinpelu, ",
+    qualification: "LL.B, LL.M ",
     role: "Legal Advisor",
     image: "/images/about/lawyer.png",
     linkedin: "https://linkedin.com/in/femi-akinpelu-5a4024a5",
   },
   {
     name: "Babatunde Oduola-Owoo,  ",
-    qualification: "MD ",
+    qualification: "M.D. ",
     role: "Medical Advisor",
     image: "/images/about/medicalAdvisor.png",
     linkedin:
@@ -39,7 +39,7 @@ const teamMembers = [
 
 export default function MeetTheTeam() {
   return (
-    <section className="py-10 md:py-20 bg-white">
+    <section id="team" className="py-10 md:py-20 bg-white">
       <Container>
         {/* Section Header */}
         <motion.h2

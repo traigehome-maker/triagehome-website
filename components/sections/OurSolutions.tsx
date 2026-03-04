@@ -19,14 +19,14 @@ const OurServicesData = [
     img: "/triagepodsImg.png",
     // title: "TriageConcierge",
     description:
-      "Allows us to reach the last mile, providing services in mobile prefab mobile containers.",
+      "Allows us to reach the last mile, providing services in prefab containers.",
   },
   {
     tag: "TriageLiving",
     active: "Coming Soon",
     img: "/triagelivingImg.png",
     description:
-      "A 24/7 nurse-led, wellness-focused assisted-living model that merges clinical care with Eastern healing and modern hospitality.",
+      "A 24/7 wellness-focused assisted-living model that merges clinical care with Eastern healing and modern hospitality.",
   },
 ];
 

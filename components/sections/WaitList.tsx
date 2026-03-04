@@ -119,12 +119,13 @@ const WaitList = () => {
           {/* Logo Pill */}
           <div className="bg-primaryblue px-8 py-2 rounded-2xl shadow-lg">
             <Image
-              src="/triagelogowhite.png"
-              alt="Triage Logo"
-              width={161}
-              height={40}
-              priority
-            />
+                        src="/triagewhite.svg"
+                        alt="Triage Logo"
+                        width={160}
+                        height={40}
+                        priority
+                        className=" w-auto object-contain"
+                      />
           </div>
 
           <h3 className="text-2xl header-raleway md:text-4xl text-white font-semibold mt-6 mb-4 drop-shadow-sm">

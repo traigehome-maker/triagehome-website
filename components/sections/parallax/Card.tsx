@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
             {title}
           </h3>
 
-          <p className="text-sm md:text-xl text-[#222222] leading-none font-medium md:font-semibold">
+          <p className="text-base md:text-2xl text-[#222222] leading-none font-semibold md:font-semibold">
             {description}
           </p>
         </div>

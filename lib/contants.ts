@@ -61,9 +61,9 @@ export const projects = [
     bgColor: "#DDEFEC",
   },
   {
-    title: "Wound Dressing & Care",
+    title: "Wound Dressing and Care",
     description:
-      "Assesment, gently cleaning, dressing changes and infection monitoring for safe, effective healing.",
+      "Assessment, gentle cleaning, dressing changes and infection monitoring for safe and effective healing.",
     src: "/images/wounddressing.png",
     view: "",
     website: "",

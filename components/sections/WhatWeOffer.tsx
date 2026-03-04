@@ -40,7 +40,7 @@ export default function WhatWeOffer() {
         >
           What We Offer
         </motion.h2>
-        <p className="mt-4 mb-8 text-[#505050] text-lg leading-none font-semibold md:w-2xl mx-auto text-center">
+        <p className="mt-4 mb-8 text-black text-base leading-none font-medium md:w-2xl mx-auto text-center">
           We offer three levels of services.
         </p>
         <motion.div

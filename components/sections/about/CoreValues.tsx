@@ -59,7 +59,7 @@ const coreValuesData = [
 
 export default function CoreValues() {
   return (
-    <section className="py-10 md:py-20 bg-white">
+    <section id="corevalues" className="py-10 md:py-20 bg-white">
       <Container>
         {/* Section Header */}
         <motion.h2

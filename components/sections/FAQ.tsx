@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     q: "How quickly can I get a clinical provider to my home?",
-    a: "Our response depends on your service level. For Standard Care booked through our app, aqualified provider can typically be at your door within a few hours, depending on availability in your area. For our Triage Concierge members, we guarantee a rapid, priority response.",
+    a: "Our response depends on your service level. For Standard Care booked through our app, a qualified provider can typically be at your door within a few hours, depending on availability in your area. For our TriageConcierge members, we guarantee a rapid, priority response.",
   },
   {
     q: "Are all your nurses qualified and vetted?",
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "What happens if I need help outside of business hours?",
-    a: "We are here when you need us. While our Standard Care service operates on extended hours for booking from 6am – 9pm, 7 days a week. Our TriageConcierge service offers 24/7 access to a dedicated health coordinator for immediate assistance, any time of day or night.",
+    a: "We are here when you need us. While our Standard Care service operates on extended hours for booking from 6am – 9pm, 7 days a week. Our TriageConcierge service offers 24/7 access to a dedicated health coordinator for immediate assistance.",
   },
   {
     q: "How does payment work?",
@@ -36,9 +36,12 @@ const faqs = [
 
       "-For Hospitals (Staffing Retainer Model): We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs.",
 
-      "-For Corporate Wellness: We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your team’s well-being. We offer both standard service packages and premium concierge plans for executives.",
+      // "-For Corporate Wellness: We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your team’s well-being. We offer both standard service packages and premium concierge plans for executives.",
 
-      "-Interested in a tailored proposal? Please contact our partnerships team at support@triage-home.com.",
+      <p key="contact-cta">
+        <span className="font-bold text-base">Interested in a tailored proposal?</span> Please contact our partnerships team
+        at support@triage-home.com.
+      </p>
     ],
     // a: "We offer structured partnerships designed to solve specific challenges:- \n\n For Hospitals (Staffing Retainer Model) : We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs. For Corporate Wellness We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your teams well-being. We offer both standard service packages and premium concierge plans for executives. Interested in a tailored proposal? Please contact our partnerships team at support@triage-home.com",
   },

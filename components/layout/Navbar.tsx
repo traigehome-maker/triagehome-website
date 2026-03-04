@@ -29,20 +29,20 @@ export default function Navbar() {
       className={`w-full border-b border-[#02385A]/10 sticky top-0 z-50 transition-all duration-300
       ${
         scrolled
-          ? "py-3 shadow-lg backdrop-blur-md bg-primaryblue/80"
+          ? "py-3 shadow-lg backdrop-blur-md bg-primaryblue"
           : "py-3 bg-primaryblue"
       }`}
     >
-      <div className="flex items-center max-w-7xl mx-auto justify-between px-4 lg:px-6">
+      <div className="flex items-center  max-w-7xl mx-auto justify-between px-4 lg:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/triagewhite.svg"
             alt="Triage Logo"
-            width={161}
+            width={160}
             height={40}
             priority
-            className=" w-auto"
+            className=" w-auto object-contain"
           />
         </Link>
 

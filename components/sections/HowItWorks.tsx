@@ -18,7 +18,7 @@ const HowItWorksData = [
     img: "/professionalIcon.png",
     title: "Match with Clinical Provider",
     description:
-      "Our algorithm instantly matches you with verified healthcare provider.",
+      "Our algorithm instantly matches you with a verified healthcare provider.",
   },
   {
     step: "Step 3",
