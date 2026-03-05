@@ -39,11 +39,11 @@ const Footer = () => {
                           />
               </Link>
               <div className="flex flex-col gap-3 text-gray-300 text-sm md:text-base font-light">
-                <p>HomeHealth Powered By People,</p>
-                <p>
+                <p>HomeHealth, Powered By People.</p>
+                {/* <p>
                   TriageHome making quality care accessible <br></br> anytime,
                   anywhere.
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -84,12 +84,12 @@ const Footer = () => {
               >
                 FAQs
               </Link>
-              <Link
+              {/* <Link
                 href="/about"
                 className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit"
               >
                 About Us
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className="text-gray-300 hover:text-white transition-colors text-sm md:text-base font-light w-fit"

@@ -36,7 +36,7 @@ const faqs = [
 
       "-For Hospitals (Staffing Retainer Model): We act as your flexible, external nursing unit. For a fixed monthly retainer, we provide fully vetted, insured nurses to fill your staffing gaps. We handle their recruitment, payroll, and HR, allowing you to scale your workforce without the administrative burden or long-term hiring costs.",
 
-      // "-For Corporate Wellness: We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your team’s well-being. We offer both standard service packages and premium concierge plans for executives.",
+      "-For Corporate Wellness: We become an extension of your employee benefits. We provide on-demand, in-home healthcare services for your staff from post-surgery care to wellness checks helping to reduce absenteeism, boost productivity, and demonstrate care for your team’s well-being. We offer both standard service packages and premium concierge plans for executives.",
 
       <p key="contact-cta">
         <span className="font-bold text-base">Interested in a tailored proposal?</span> Please contact our partnerships team

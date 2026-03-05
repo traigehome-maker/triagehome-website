@@ -15,7 +15,7 @@ export const AboutUs = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="order-2 lg:order-1 w-full  flex justify-center"
+            className="order-2 lg:order-1 w-full lg:max-w-1/2  "
           >
             <div className="relative">
               <Image
@@ -23,7 +23,7 @@ export const AboutUs = () => {
                 alt="TriageHome Team"
                 width={431}
                 height={464}
-                className="w-full "
+                className="w-full object-contain"
               />
             </div>
           </motion.div>
@@ -34,7 +34,7 @@ export const AboutUs = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="order-1 lg:order-2 w-full lg:max-w-3xl space-y-0"
+            className="order-1 lg:order-2 w-full lg:max-w-1/2 space-y-0"
           >
             <h2 className="header3 text-center lg:text-left">About Us</h2>
 
