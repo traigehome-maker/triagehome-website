@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Raleway,Nunito_Sans } from "next/font/google";
+import { Raleway, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
@@ -20,25 +20,27 @@ const nunito = Nunito_Sans({
 export const metadata: Metadata = {
   title: {
     default: "TriageHome | Revolutionizing Healthcare Access",
-    template: "%s | TriageHome"
+    template: "%s | TriageHome",
   },
-  description: "TriageHome provides premium healthcare services including VIP concierge, standard nursing, and corporate partnerships. Bringing quality care to your doorstep.",
+  description:
+    "TriageHome provides premium healthcare services including VIP concierge, standard nursing, and corporate partnerships. Bringing quality care to your doorstep.",
   keywords: [
-    "healthcare Nigeria", 
-    "home nursing services", 
-    "VIP medical concierge", 
-    "TriageHome", 
-    "mobile clinical services", 
+    "healthcare Nigeria",
+    "home nursing services",
+    "VIP medical concierge",
+    "TriageHome",
+    "mobile clinical services",
     "corporate wellness Nigeria",
-    "at-home medical care"
+    "at-home medical care",
   ],
   authors: [{ name: "TriageHome Team" }],
   creator: "TriageHome",
   publisher: "TriageHome",
   openGraph: {
     title: "TriageHome | Revolutionizing Healthcare Access",
-    description: "Premium healthcare services at your convenience. Join TriageHome for a new standard of care.",
-    url: "https://triagehome.com",
+    description:
+      "Premium healthcare services at your convenience. Join TriageHome for a new standard of care.",
+    url: "https://triage-home.com",
     siteName: "TriageHome",
     images: [
       {
@@ -54,7 +56,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TriageHome | Revolutionizing Healthcare Access",
-    description: "Premium healthcare services at your convenience. Join TriageHome for a new standard of care.",
+    description:
+      "Premium healthcare services at your convenience. Join TriageHome for a new standard of care.",
     images: ["/heroImg.png"],
   },
   robots: {
@@ -77,9 +80,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${nunito.variable} ${raleway.variable} antialiased`}
-      >
+      <body className={`${nunito.variable} ${raleway.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
