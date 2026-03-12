@@ -6,7 +6,9 @@ export const AboutVideo = () => {
       <Container>
         <div className="flex flex-col gap-8 items-center ">
           <div>
-            <h2 className="header3 text-center lg:text-left">About Video</h2>
+            <h2 className="header3 text-center lg:text-left">
+              Triage Overview
+            </h2>
           </div>
 
           {/* Video Container */}
@@ -15,7 +17,7 @@ export const AboutVideo = () => {
               controls
               preload="metadata"
               className="w-full h-full rounded-xl shadow-lg object-cover"
-              poster="/images/video-poster.jpg"
+              poster="/TriageHomeLogo.png"
             >
               <source src="/triage-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
