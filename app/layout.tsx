@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "TriageHome",
     images: [
       {
-        url: "/TriageHomeLogo.png", // Using TriageHome logo as OG image
+        url: "https://triage-home.com/TriageHomeLogo.png", // Using existing hero image as OG image for now
         width: 1200,
         height: 630,
         alt: "TriageHome - Healthcare at your doorstep",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "TriageHome | Revolutionizing Healthcare Access",
     description:
       "Premium healthcare services at your convenience. Join TriageHome for a new standard of care.",
-    images: ["/TriageHomeLogo.png"],
+    images: ["https://triage-home.com/TriageHomeLogo.png"],
   },
   robots: {
     index: true,
